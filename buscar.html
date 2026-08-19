@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AERO — Buscar viagem</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="miku">
+        <nav class="bowie" aria-label="Navegação principal">
+
+            <a href="index.html" class="luka" aria-label="Página inicial da AERO">
+                AERO
+            </a>
+
+            <div class="kaito">
+                <a href="index.html" class="rin">Início</a>
+                <a href="buscar.html" class="rin">Buscar</a>
+                <a href="#" class="rin">Viagens</a>
+            </div>
+
+            <button class="len" aria-label="Notificações">
+                ♧
+            </button>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="kanade">
+
+            <div class="marcy">
+                <p class="ado">AERO TRAVEL</p>
+
+                <h1>
+                    Encontre sua viagem
+                </h1>
+
+                <p>
+                    Informe os detalhes da sua viagem para encontrar
+                    as melhores opções disponíveis.
+                </p>
+            </div>
+
+
+            <section class="meiko" aria-labelledby="busca-titulo">
+
+                <h2 id="busca-titulo" class="flower">
+                    Dados da viagem
+                </h2>
+
+
+                <form class="rei" action="#" method="get">
+
+                    <div class="asuka">
+
+                        <label for="origem">
+                            De onde você vai?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="origem"
+                            name="origem"
+                            placeholder="São Paulo, SP"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="asuka">
+
+                        <label for="destino">
+                            Para onde você vai?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destino"
+                            name="destino"
+                            placeholder="Rio de Janeiro, RJ"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="sonic">
+
+                        <div class="asuka">
+
+                            <label for="data">
+                                Data da viagem
+                            </label>
+
+                            <input
+                                type="date"
+                                id="data"
+                                name="data"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="asuka">
+
+                            <label for="passageiros">
+                                Passageiros
+                            </label>
+
+                            <input
+                                type="number"
+                                id="passageiros"
+                                name="passageiros"
+                                min="1"
+                                max="10"
+                                value="1"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="asuka">
+
+                        <label for="transporte">
+                            Tipo de transporte
+                        </label>
+
+                        <select
+                            id="transporte"
+                            name="transporte"
+                        >
+
+                            <option value="aviao">
+                                Avião
+                            </option>
+
+                            <option value="helicoptero">
+                                Helicóptero
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="yor">
+                        Buscar viagens
+                    </button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+
+        <section class="iris" aria-labelledby="dicas-titulo">
+
+            <div class="celeste">
+
+                <h2 id="dicas-titulo">
+                    Dicas para sua busca
+                </h2>
+
+                <p>
+                    Preencha todos os campos para encontrar
+                    opções que combinam com sua viagem.
+                </p>
+
+            </div>
+
+
+            <div class="atlas">
+
+                <article class="ren">
+
+                    <div class="zephyr">
+                        ✈
+                    </div>
+
+                    <div>
+                        <h3>
+                            Voos rápidos
+                        </h3>
+
+                        <p>
+                            Encontre opções para chegar mais rápido.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="ren">
+
+                    <div class="zephyr">
+                        💜
+                    </div>
+
+                    <div>
+                        <h3>
+                            Escolha sua viagem
+                        </h3>
+
+                        <p>
+                            Compare horários e valores antes de escolher.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="radiohead">
+
+        <p>
+            © 2026 AERO Travel
+        </p>
+
+    </footer>
+
+</body>
+</html>
