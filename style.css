@@ -1,0 +1,393 @@
+:root {
+    --miku-blue: #6257f5;
+    --miku-light: #8279ff;
+    --bowie-night: #111827;
+    --luka-space: #182338;
+    --gumi-white: #ffffff;
+    --teto-cloud: #f5f6fa;
+    --ado-gray: #687083;
+    --ado-border: #e5e7eb;
+    --freddie-shadow: 0 12px 35px rgba(17, 24, 39, 0.10);
+    --hayley-shadow: 0 5px 18px rgba(98, 87, 245, 0.18);
+    --meiko-round: 18px;
+    --rei-round: 12px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: var(--bowie-night);
+    background: var(--teto-cloud);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+.miku {
+    width: 100%;
+    background: var(--gumi-white);
+    border-bottom: 1px solid var(--ado-border);
+}
+
+.bowie {
+    width: min(1180px, 92%);
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.luka {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: var(--miku-blue);
+}
+
+.kaito {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.rin {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ado-gray);
+    transition: color 0.2s ease;
+}
+
+.rin:hover {
+    color: var(--miku-blue);
+}
+
+.len {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    color: var(--gumi-white);
+    background: var(--bowie-night);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.len:hover {
+    transform: translateY(-2px);
+    background: var(--miku-blue);
+}
+
+.gumi {
+    width: min(1180px, 92%);
+    min-height: 520px;
+    margin: 35px auto 0;
+    padding: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    border-radius: 28px;
+    color: var(--gumi-white);
+    background:
+        linear-gradient(
+            135deg,
+            var(--luka-space),
+            var(--bowie-night)
+        );
+
+    box-shadow: var(--freddie-shadow);
+}
+
+.teto {
+    max-width: 520px;
+}
+
+
+.ado {
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--miku-light);
+}
+
+
+.freddie {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+
+.hayley {
+    max-width: 420px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #c8cedb;
+}
+
+.meiko {
+    padding: 32px;
+    border-radius: var(--meiko-round);
+    color: var(--bowie-night);
+    background: var(--gumi-white);
+    box-shadow: var(--freddie-shadow);
+}
+
+
+.flower {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+
+.rei {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.asuka {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.asuka label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ado-gray);
+}
+
+
+.asuka input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--ado-border);
+    border-radius: var(--rei-round);
+    outline: none;
+    color: var(--bowie-night);
+    background: var(--teto-cloud);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.asuka input:focus {
+    border-color: var(--miku-blue);
+    box-shadow: 0 0 0 3px rgba(98, 87, 245, 0.12);
+}
+
+
+.yor {
+    width: 100%;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: var(--rei-round);
+    color: var(--gumi-white);
+    background: var(--miku-blue);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--hayley-shadow);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.yor:hover {
+    transform: translateY(-2px);
+    background: var(--miku-light);
+}
+
+
+.kanade {
+    width: min(1180px, 92%);
+    margin: 55px auto;
+
+}
+
+
+.marcy {
+    margin-bottom: 25px;
+}
+
+
+.marcy h2 {
+    margin-bottom: 7px;
+    font-size: 24px;
+}
+
+
+.marcy p {
+    color: var(--ado-gray);
+    font-size: 14px;
+}
+
+
+.sonic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.mob {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid var(--ado-border);
+    border-radius: var(--meiko-round);
+    background: var(--gumi-white);
+    box-shadow: var(--freddie-shadow);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.mob:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(17, 24, 39, 0.13);
+}
+
+
+.ramona {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    font-size: 22px;
+    background: #eeedff;
+}
+
+
+.mob h3 {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+
+.mob p {
+    font-size: 13px;
+    color: var(--ado-gray);
+}
+
+.radiohead {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid var(--ado-border);
+    color: var(--ado-gray);
+    background: var(--gumi-white);
+    font-size: 12px;
+}
+
+@media (max-width: 850px) {
+
+    .gumi {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 45px;
+    }
+
+    .teto {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+  
+    .bowie {
+        min-height: 64px;
+    }
+
+    .kaito {
+        display: none;
+    }
+
+
+    .gumi {
+        width: 94%;
+        margin-top: 15px;
+        padding: 30px 22px;
+        border-radius: 22px;
+        gap: 30px;
+    }
+
+
+    .freddie {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+
+    .meiko {
+        padding: 22px;
+    }
+
+
+    .sonic {
+        grid-template-columns: 1fr;
+    }
+
+
+    .kanade {
+        width: 94%;
+        margin: 40px auto;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .gumi {
+        padding: 25px 18px;
+    }
+
+
+    .freddie {
+        font-size: 33px;
+    }
+
+
+    .meiko {
+        padding: 18px;
+    }
+
+
+    .mob {
+        padding: 18px;
+    }
+
+}
