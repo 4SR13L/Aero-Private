@@ -177,6 +177,32 @@ input {
     gap: 8px;
 }
 
+.asuka select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--ado-border);
+    border-radius: var(--rei-round);
+
+    outline: none;
+
+    color: var(--bowie-night);
+    background: var(--teto-cloud);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.asuka select:focus {
+    border-color: var(--miku-blue);
+    box-shadow: 0 0 0 3px rgba(98, 87, 245, 0.12);
+}
+
 
 .asuka label {
     font-size: 12px;
