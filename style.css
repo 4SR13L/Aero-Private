@@ -1,23 +1,34 @@
 :root {
     --miku-blue: #6257f5;
-    --miku-light: #8279ff;
+    --miku-light: #7469ff;
+
     --bowie-night: #111827;
-    --luka-space: #182338;
+    --luka-space: #172036;
+
     --gumi-white: #ffffff;
     --teto-cloud: #f5f6fa;
-    --ado-gray: #687083;
-    --ado-border: #e5e7eb;
-    --freddie-shadow: 0 12px 35px rgba(17, 24, 39, 0.10);
-    --hayley-shadow: 0 5px 18px rgba(98, 87, 245, 0.18);
-    --meiko-round: 18px;
-    --rei-round: 12px;
-}
 
+    --ado-gray: #687080;
+    --ado-border: #e1e4ea;
+
+    --rei-round: 10px;
+    --meiko-round: 18px;
+
+    --freddie-shadow:
+        0 10px 30px rgba(17, 24, 39, 0.08);
+
+    --hayley-shadow:
+        0 8px 25px rgba(98, 87, 245, 0.25);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,17 +39,25 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
 button,
-input {
+input,
+select {
     font: inherit;
 }
 
+button {
+    border: none;
+}
 
 .miku {
     width: 100%;
@@ -47,32 +66,34 @@ input {
 }
 
 .bowie {
-    width: min(1180px, 92%);
-    min-height: 72px;
+    width: min(1200px, 92%);
+    min-height: 64px;
     margin: 0 auto;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 30px;
 }
 
 .luka {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: 5px;
     color: var(--miku-blue);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 4px;
 }
 
 .kaito {
+    display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
+    margin-left: auto;
 }
 
 .rin {
     position: relative;
-    font-size: 14px;
-    font-weight: 500;
     color: var(--ado-gray);
+    font-size: 13px;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
@@ -83,92 +104,79 @@ input {
 .len {
     width: 38px;
     height: 38px;
-    border: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
     border-radius: 50%;
+
     color: var(--gumi-white);
     background: var(--bowie-night);
+
     cursor: pointer;
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
 }
 
-.len:hover {
-    transform: translateY(-2px);
-    background: var(--miku-blue);
+main {
+    width: 100%;
 }
 
-.gumi {
-    width: min(1180px, 92%);
-    min-height: 520px;
-    margin: 35px auto 0;
-    padding: 65px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 70px;
-    border-radius: 28px;
-    color: var(--gumi-white);
-    background:
-        linear-gradient(
-            135deg,
-            var(--luka-space),
-            var(--bowie-night)
-        );
-
-    box-shadow: var(--freddie-shadow);
+.kanade {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 55px 0;
 }
 
-.teto {
-    max-width: 520px;
+.marcy {
+    margin-bottom: 30px;
 }
-
 
 .ado {
-    margin-bottom: 15px;
-    font-size: 12px;
-    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--miku-blue);
+    font-size: 11px;
+    font-weight: 800;
     letter-spacing: 3px;
-    color: var(--miku-light);
 }
 
+.marcy h1 {
+    max-width: 700px;
+    margin-bottom: 15px;
 
-.freddie {
-    margin-bottom: 20px;
-    font-size: clamp(36px, 5vw, 60px);
+    font-size: clamp(32px, 5vw, 52px);
     line-height: 1.05;
     letter-spacing: -2px;
 }
 
-
-.hayley {
-    max-width: 420px;
-    font-size: 16px;
+.marcy > p:not(.ado) {
+    max-width: 600px;
+    color: var(--ado-gray);
+    font-size: 15px;
     line-height: 1.7;
-    color: #c8cedb;
 }
 
 .meiko {
-    padding: 32px;
+    max-width: 850px;
+    margin: 35px auto 0;
+    padding: 30px;
+
     border-radius: var(--meiko-round);
-    color: var(--bowie-night);
     background: var(--gumi-white);
     box-shadow: var(--freddie-shadow);
 }
-
 
 .flower {
     margin-bottom: 25px;
     font-size: 20px;
 }
 
-
 .rei {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
-
 
 .asuka {
     display: flex;
@@ -176,252 +184,151 @@ input {
     gap: 8px;
 }
 
-.asuka select {
-    width: 100%;
-
-    padding: 14px 16px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--rei-round);
-
-    outline: none;
-
-    color: var(--bowie-night);
-    background: var(--teto-cloud);
-
-    cursor: pointer;
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-.asuka select:focus {
-    border-color: var(--miku-blue);
-    box-shadow: 0 0 0 3px rgba(98, 87, 245, 0.12);
-}
-
-
 .asuka label {
+    color: var(--ado-gray);
     font-size: 12px;
     font-weight: 600;
-    color: var(--ado-gray);
 }
 
-
-.asuka input {
+.asuka input,
+.asuka select {
     width: 100%;
-    padding: 14px 16px;
+    min-height: 48px;
+
+    padding: 12px 15px;
+
     border: 1px solid var(--ado-border);
     border-radius: var(--rei-round);
+
     outline: none;
+
     color: var(--bowie-night);
     background: var(--teto-cloud);
+
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-
-.asuka input:focus {
+.asuka input:focus,
+.asuka select:focus {
     border-color: var(--miku-blue);
-    box-shadow: 0 0 0 3px rgba(98, 87, 245, 0.12);
+
+    box-shadow:
+        0 0 0 3px rgba(98, 87, 245, 0.12);
 }
 
+.asuka input::placeholder {
+    color: #8b92a0;
+}
+
+.sonic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 
 .yor {
     width: 100%;
-    padding: 14px 20px;
-    border: 0;
+    min-height: 48px;
+
+    padding: 13px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: var(--rei-round);
+
     color: var(--gumi-white);
     background: var(--miku-blue);
+
+    font-size: 13px;
     font-weight: 700;
+
     cursor: pointer;
-    box-shadow: var(--hayley-shadow);
+
     transition:
         transform 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .yor:hover {
     transform: translateY(-2px);
     background: var(--miku-light);
+    box-shadow: var(--hayley-shadow);
 }
 
+.iris {
+    width: min(1100px, 92%);
+    margin: 0 auto 50px;
 
-.kanade {
-    width: min(1180px, 92%);
-    margin: 55px auto;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
+.celeste,
+.ren {
+    padding: 25px;
 
-.marcy {
-    margin-bottom: 25px;
+    border: 1px solid var(--ado-border);
+    border-radius: var(--meiko-round);
+
+    background: var(--gumi-white);
 }
 
-
-.marcy h2 {
-    margin-bottom: 7px;
-    font-size: 24px;
+.celeste h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-
-.marcy p {
+.celeste p {
     color: var(--ado-gray);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.atlas {
+    display: grid;
+    gap: 15px;
+}
+
+.ren {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ren h3 {
+    margin-bottom: 5px;
     font-size: 14px;
 }
 
-
-.sonic {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.ren p {
+    color: var(--ado-gray);
+    font-size: 11px;
+    line-height: 1.5;
 }
 
+.zephyr {
+    width: 45px;
+    height: 45px;
 
-.mob {
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-    background: var(--gumi-white);
-    box-shadow: var(--freddie-shadow);
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-.mob:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 35px rgba(17, 24, 39, 0.13);
-}
-
-
-.ramona {
-    width: 50px;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-shrink: 0;
-    border-radius: 14px;
-    font-size: 22px;
+
+    border-radius: 13px;
     background: #eeedff;
 }
-
-
-.mob h3 {
-    margin-bottom: 4px;
-    font-size: 16px;
-}
-
-
-.mob p {
-    font-size: 13px;
-    color: var(--ado-gray);
-}
-
-.radiohead {
-    padding: 25px;
-    text-align: center;
-    border-top: 1px solid var(--ado-border);
-    color: var(--ado-gray);
-    background: var(--gumi-white);
-    font-size: 12px;
-}
-
-@media (max-width: 850px) {
-
-    .gumi {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 45px;
-    }
-
-    .teto {
-        max-width: 100%;
-    }
-
-}
-
-@media (max-width: 360px) {
-  
-    .bowie {
-        min-height: 64px;
-    }
-
-    .kaito {
-        display: none;
-    }
-
-
-    .gumi {
-        width: 94%;
-        margin-top: 15px;
-        padding: 30px 22px;
-        border-radius: 22px;
-        gap: 30px;
-    }
-
-
-    .freddie {
-        font-size: 38px;
-        letter-spacing: -1px;
-    }
-
-
-    .meiko {
-        padding: 22px;
-    }
-
-
-    .sonic {
-        grid-template-columns: 1fr;
-    }
-
-
-    .kanade {
-        width: 94%;
-        margin: 40px auto;
-    }
-
-}
-
-
-@media (max-width: 360px) {
-
-    .gumi {
-        padding: 25px 18px;
-    }
-
-
-    .freddie {
-        font-size: 33px;
-    }
-
-
-    .meiko {
-        padding: 18px;
-    }
-
-
-    .mob {
-        padding: 18px;
-    }
-
-}
-
 
 .lilith {
     margin: 30px 0;
 }
-
 
 .nyan {
     padding: 20px;
@@ -429,7 +336,6 @@ input {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 10px;
 
     border: 1px solid var(--ado-border);
@@ -438,15 +344,11 @@ input {
     background: var(--gumi-white);
 }
 
-
 .nyan h2 {
     width: 100%;
-
     margin-bottom: 5px;
-
     font-size: 16px;
 }
-
 
 .lilac {
     padding: 9px 15px;
@@ -464,47 +366,37 @@ input {
 
     transition:
         color 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        background 0.2s ease;
 }
-
 
 .lilac:hover {
     color: var(--miku-blue);
-
     border-color: var(--miku-blue);
-
     background: #eeedff;
 }
-
 
 .kira {
     margin-top: 40px;
 }
 
-
 .mavis {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 22px;
 }
-
 
 .seraph {
     padding: 25px;
 
     display: flex;
     flex-direction: column;
-
     gap: 25px;
 
     border: 1px solid var(--ado-border);
     border-radius: var(--meiko-round);
 
     background: var(--gumi-white);
-
     box-shadow: var(--freddie-shadow);
 
     transition:
@@ -512,22 +404,18 @@ input {
         box-shadow 0.2s ease;
 }
 
-
 .seraph:hover {
     transform: translateY(-4px);
 
-    box-shadow: 0 16px 35px rgba(17, 24, 39, 0.13);
+    box-shadow:
+        0 16px 35px rgba(17, 24, 39, 0.13);
 }
-
-
 
 .vivi {
     display: flex;
     align-items: center;
-
     gap: 14px;
 }
-
 
 .chihiro {
     width: 48px;
@@ -540,73 +428,55 @@ input {
     flex-shrink: 0;
 
     border-radius: 14px;
+    background: #eeedff;
 
     font-size: 21px;
-
-    background: #eeedff;
 }
-
 
 .vivi h3 {
     margin-bottom: 4px;
-
     font-size: 16px;
 }
 
-
 .vivi p {
-    font-size: 12px;
-
     color: var(--ado-gray);
+    font-size: 12px;
 }
-
 
 .yuna {
     display: grid;
-
     grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
-
     gap: 12px;
 
     text-align: center;
 }
 
-
 .yuna div {
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 }
-
 
 .yuna strong {
     font-size: 20px;
 }
 
-
 .yuna span {
-    font-size: 11px;
-
     color: var(--ado-gray);
+    font-size: 11px;
 }
-
 
 .suki {
-    font-size: 10px;
-
     color: var(--miku-blue);
-
+    font-size: 10px;
     white-space: nowrap;
 }
-
 
 .raven {
     display: flex;
     justify-content: space-between;
-
     gap: 20px;
 
     padding-top: 20px;
@@ -614,74 +484,25 @@ input {
     border-top: 1px solid var(--ado-border);
 }
 
-
 .raven div {
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 }
 
-
 .raven span {
-    font-size: 11px;
-
     color: var(--ado-gray);
+    font-size: 11px;
 }
-
 
 .raven strong {
     font-size: 14px;
 }
 
-
 .violet-text {
     color: var(--miku-blue);
 }
 
-
-@media (max-width: 850px) {
-
-    .mavis {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 360px) {
-
-    .nyan {
-        align-items: stretch;
-    }
-
-
-    .lilac {
-        flex: 1;
-    }
-
-
-    .seraph {
-        padding: 20px;
-    }
-
-
-    .yuna {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-
-    .suki {
-        display: none;
-    }
-
-
-    .raven {
-        flex-direction: column;
-    }
-
-}
 .morrigan {
     display: inline-block;
 
@@ -695,31 +516,24 @@ input {
     transition: transform 0.2s ease;
 }
 
-
 .morrigan:hover {
     transform: translateX(-4px);
 }
 
-
 .aster {
     margin-top: 35px;
-
     padding: 30px;
 
+    border: 1px solid var(--ado-border);
     border-radius: var(--meiko-round);
 
     background: var(--gumi-white);
-
-    border: 1px solid var(--ado-border);
-
     box-shadow: var(--freddie-shadow);
 }
-
 
 .selene {
     display: flex;
     align-items: center;
-
     gap: 15px;
 
     padding-bottom: 25px;
@@ -727,20 +541,15 @@ input {
     border-bottom: 1px solid var(--ado-border);
 }
 
-
 .selene h2 {
     margin-bottom: 4px;
-
     font-size: 20px;
 }
 
-
 .selene p {
-    font-size: 12px;
-
     color: var(--ado-gray);
+    font-size: 12px;
 }
-
 
 .lilith-text {
     margin-bottom: 4px;
@@ -749,9 +558,9 @@ input {
 
     font-size: 10px !important;
     font-weight: 700;
+
     letter-spacing: 1px;
 }
-
 
 .orion {
     padding: 35px 10px;
@@ -761,93 +570,70 @@ input {
     grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
-
     gap: 25px;
 
     text-align: center;
 }
 
-
 .destino {
     display: flex;
     flex-direction: column;
-
     gap: 7px;
 }
 
-
 .destino span {
-    font-size: 11px;
-
     color: var(--ado-gray);
+    font-size: 11px;
 }
-
 
 .destino strong {
     font-size: 28px;
 }
 
-
 .destino p {
-    font-size: 13px;
-
     color: var(--ado-gray);
+    font-size: 13px;
 }
-
 
 .trajeto {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     gap: 8px;
 
     color: var(--miku-blue);
 }
 
-
 .trajeto span {
-    font-size: 10px;
-
     color: var(--ado-gray);
+    font-size: 10px;
 }
-
 
 .trajeto div {
     font-size: 10px;
-
     white-space: nowrap;
 }
-
 
 .lyra {
     margin-top: 30px;
 }
 
-
 .lyra h2 {
     margin-bottom: 18px;
-
     font-size: 20px;
 }
 
-
 .cassio {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 15px;
 }
-
 
 .nova-card {
     padding: 20px;
 
     display: flex;
     flex-direction: column;
-
     gap: 7px;
 
     border: 1px solid var(--ado-border);
@@ -856,22 +642,17 @@ input {
     background: var(--gumi-white);
 }
 
-
 .nova-card span {
-    font-size: 11px;
-
     color: var(--ado-gray);
+    font-size: 11px;
 }
-
 
 .nova-card strong {
     font-size: 14px;
 }
 
-
 .payton {
     margin-top: 30px;
-
     padding: 25px;
 
     display: flex;
@@ -883,72 +664,24 @@ input {
     border-radius: var(--meiko-round);
 
     color: var(--gumi-white);
-
     background: var(--bowie-night);
 
     box-shadow: var(--freddie-shadow);
 }
 
-
 .payton p {
     margin-bottom: 5px;
-
-    font-size: 12px;
-
     color: #c8cedb;
+    font-size: 12px;
 }
-
 
 .payton h2 {
     font-size: 28px;
 }
 
-
 .payton .yor {
     width: auto;
-
     min-width: 160px;
-
-    text-align: center;
-
-    color: var(--gumi-white);
-}
-
-@media (max-width: 650px) {
-
-    .aster {
-        padding: 22px 18px;
-    }
-
-
-    .orion {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-
-    .trajeto {
-        transform: rotate(90deg);
-    }
-
-
-    .cassio {
-        grid-template-columns: 1fr;
-    }
-
-
-    .payton {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .payton .yor {
-        width: 100%;
-    }
-
 }
 
 .selena {
@@ -958,7 +691,6 @@ input {
 
     text-align: center;
 }
-
 
 .stella {
     width: 75px;
@@ -973,7 +705,6 @@ input {
     border-radius: 50%;
 
     color: var(--gumi-white);
-
     background: var(--miku-blue);
 
     font-size: 34px;
@@ -982,11 +713,9 @@ input {
     box-shadow: var(--hayley-shadow);
 }
 
-
 .selena > .ado {
     margin-bottom: 12px;
 }
-
 
 .selena h1 {
     margin-bottom: 12px;
@@ -996,17 +725,15 @@ input {
     letter-spacing: -1px;
 }
 
-
 .cassie-text {
     max-width: 500px;
 
     margin: 0 auto 35px;
 
-    line-height: 1.6;
-
     color: var(--ado-gray);
-}
 
+    line-height: 1.6;
+}
 
 .celine {
     padding: 30px;
@@ -1017,10 +744,8 @@ input {
     border-radius: var(--meiko-round);
 
     background: var(--gumi-white);
-
     box-shadow: var(--freddie-shadow);
 }
-
 
 .marina {
     display: flex;
@@ -1034,11 +759,9 @@ input {
     border-bottom: 1px solid var(--ado-border);
 }
 
-
 .marina h2 {
     font-size: 20px;
 }
-
 
 .confirmed {
     padding: 6px 10px;
@@ -1050,14 +773,15 @@ input {
 
     font-size: 10px;
     font-weight: 700;
+
     letter-spacing: 0.5px;
 }
-
 
 .violetta {
     padding: 28px 10px;
 
     display: grid;
+
     grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
@@ -1067,34 +791,26 @@ input {
     text-align: center;
 }
 
-
 .location {
     display: flex;
     flex-direction: column;
-
     gap: 7px;
 }
 
-
 .location span {
-    font-size: 11px;
-
     color: var(--ado-gray);
+    font-size: 11px;
 }
-
 
 .location strong {
     font-size: 15px;
 }
 
-
 .arrow {
     color: var(--miku-blue);
-
     font-size: 25px;
     font-weight: 700;
 }
-
 
 .total {
     margin-top: 20px;
@@ -1107,101 +823,50 @@ input {
     border-top: 1px solid var(--ado-border);
 }
 
-
 .total span {
     color: var(--ado-gray);
-
     font-size: 13px;
 }
 
-
 .total strong {
     color: var(--miku-blue);
-
     font-size: 24px;
 }
-
 
 .actions {
     margin-top: 25px;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
     gap: 15px;
 }
 
-
 .actions .yor {
     max-width: 300px;
-
-    text-align: center;
 }
-
 
 .back-home {
     color: var(--ado-gray);
-
     font-size: 13px;
     font-weight: 600;
 
     transition: color 0.2s ease;
 }
 
-
 .back-home:hover {
     color: var(--miku-blue);
-}
-
-@media (max-width: 360px) {
-
-    .selena {
-        margin: 40px auto;
-    }
-
-
-    .celine {
-        padding: 22px 18px;
-    }
-
-
-    .marina {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-
-    .violetta {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-
-    .arrow {
-        transform: rotate(90deg);
-    }
-
-
-    .total strong {
-        font-size: 20px;
-    }
-
 }
 
 .tabs {
     margin: 35px 0 30px;
 
     display: flex;
-
     gap: 8px;
 
     border-bottom: 1px solid var(--ado-border);
 }
-
 
 .tab {
     padding: 12px 18px;
@@ -1218,23 +883,18 @@ input {
         border-color 0.2s ease;
 }
 
-
 .tab:hover {
     color: var(--miku-blue);
 }
 
-
 .active-tab {
     color: var(--miku-blue);
-
     border-bottom-color: var(--miku-blue);
 }
-
 
 .viagens-section {
     margin-bottom: 45px;
 }
-
 
 .section-heading {
     margin-bottom: 18px;
@@ -1246,16 +906,13 @@ input {
     gap: 20px;
 }
 
-
 .section-heading h2 {
     font-size: 20px;
 }
 
-
 .section-heading span {
-    font-size: 12px;
-
     color: var(--ado-gray);
+    font-size: 12px;
 }
 
 .viagens-grid {
@@ -1265,7 +922,6 @@ input {
 
     gap: 20px;
 }
-
 
 .viagem-card {
     padding: 25px;
@@ -1279,7 +935,6 @@ input {
     border-radius: var(--meiko-round);
 
     background: var(--gumi-white);
-
     box-shadow: var(--freddie-shadow);
 
     transition:
@@ -1287,13 +942,12 @@ input {
         box-shadow 0.2s ease;
 }
 
-
 .viagem-card:hover {
     transform: translateY(-4px);
 
-    box-shadow: 0 16px 35px rgba(17, 24, 39, 0.13);
+    box-shadow:
+        0 16px 35px rgba(17, 24, 39, 0.13);
 }
-
 
 .viagem-topo {
     display: flex;
@@ -1303,28 +957,21 @@ input {
     gap: 15px;
 }
 
-
 .companhia {
     display: flex;
     align-items: center;
-
     gap: 14px;
 }
 
-
 .companhia h3 {
     margin-bottom: 4px;
-
     font-size: 16px;
 }
 
-
 .companhia p {
-    font-size: 12px;
-
     color: var(--ado-gray);
+    font-size: 12px;
 }
-
 
 .status {
     padding: 6px 10px;
@@ -1337,7 +984,6 @@ input {
     font-size: 10px;
     font-weight: 700;
 }
-
 
 .rota {
     padding: 25px 0;
@@ -1356,39 +1002,29 @@ input {
     border-bottom: 1px solid var(--ado-border);
 }
 
-
 .cidade {
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 }
 
-
 .cidade span {
-    font-size: 12px;
-
     color: var(--ado-gray);
+    font-size: 12px;
 }
-
 
 .cidade strong {
     font-size: 22px;
 }
 
-
 .cidade small {
-    font-size: 10px;
-
     color: var(--ado-gray);
+    font-size: 10px;
 }
-
 
 .linha-rota {
     color: var(--miku-blue);
-
     font-size: 10px;
-
     white-space: nowrap;
 }
 
@@ -1400,26 +1036,20 @@ input {
     gap: 15px;
 }
 
-
 .viagem-info div {
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 }
 
-
 .viagem-info span {
-    font-size: 10px;
-
     color: var(--ado-gray);
+    font-size: 10px;
 }
-
 
 .viagem-info strong {
     font-size: 13px;
 }
-
 
 .detalhes-link {
     padding: 13px;
@@ -1441,10 +1071,8 @@ input {
         background 0.2s ease;
 }
 
-
 .detalhes-link:hover {
     transform: translateY(-2px);
-
     background: var(--miku-light);
 }
 
@@ -1461,7 +1089,6 @@ input {
 
     background: var(--gumi-white);
 }
-
 
 .historico-icon {
     width: 48px;
@@ -1481,25 +1108,19 @@ input {
     font-size: 20px;
 }
 
-
 .historico-card h3 {
     margin-bottom: 5px;
-
     font-size: 15px;
 }
 
-
 .historico-card p {
-    font-size: 12px;
-
-    line-height: 1.5;
-
     color: var(--ado-gray);
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 .nova-viagem {
     margin-top: 20px;
-
     padding: 30px;
 
     display: flex;
@@ -1522,31 +1143,54 @@ input {
     box-shadow: var(--freddie-shadow);
 }
 
-
 .nova-viagem h2 {
     margin-bottom: 7px;
-
     font-size: 20px;
 }
 
-
 .nova-viagem p {
-    font-size: 13px;
-
     color: #c8cedb;
+    font-size: 13px;
 }
-
 
 .nova-viagem .yor {
     width: auto;
-
     min-width: 160px;
-
-    text-align: center;
 }
 
+.radiohead {
+    width: 100%;
+
+    padding: 25px 5%;
+
+    text-align: center;
+
+    border-top: 1px solid var(--ado-border);
+
+    background: var(--gumi-white);
+
+    color: var(--ado-gray);
+
+    font-size: 11px;
+}
 
 @media (max-width: 850px) {
+
+    .bowie {
+        width: 94%;
+    }
+
+    .kanade {
+        width: 94%;
+    }
+
+    .iris {
+        width: 94%;
+    }
+
+    .mavis {
+        grid-template-columns: 1fr;
+    }
 
     .viagens-grid {
         grid-template-columns: 1fr;
@@ -1554,82 +1198,37 @@ input {
 
 }
 
+@media (max-width: 600px) {
 
-@media (max-width: 360px) {
-
-    .tabs {
-        overflow-x: auto;
-    }
-
-
-    .tab {
-        white-space: nowrap;
-    }
-
-
-    .viagem-card {
-        padding: 20px;
-    }
-
-
-    .viagem-topo {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-
-    .rota {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-
-    .linha-rota {
-        display: none;
-    }
-
-
-    .viagem-info {
-        grid-template-columns: 1fr;
-    }
-
-
-    .nova-viagem {
-        align-items: stretch;
-
-        flex-direction: column;
-    }
-
-
-    .nova-viagem .yor {
+    body {
         width: 100%;
+        font-size: 14px;
     }
-
-}
-
-@media (max-width: 360px) {
 
     .bowie {
-        padding: 12px 16px;
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 13px 15px;
+
+        display: flex;
 
         flex-wrap: wrap;
 
-        row-gap: 10px;
+        gap: 0;
     }
 
     .luka {
         font-size: 20px;
+        letter-spacing: 3px;
     }
 
     .len {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
 
         margin-left: auto;
-
-        flex-shrink: 0;
     }
 
     .kaito {
@@ -1637,21 +1236,582 @@ input {
 
         width: 100%;
 
+        margin: 12px 0 0;
+
+        padding-top: 11px;
+
         display: flex;
 
         justify-content: center;
 
-        gap: 25px;
-
-        padding-top: 8px;
+        gap: 0;
 
         border-top: 1px solid var(--ado-border);
     }
 
     .rin {
-        font-size: 12px;
+        flex: 1;
 
-        white-space: nowrap;
+        padding: 6px 4px;
+
+        text-align: center;
+
+        font-size: 11px;
+    }
+
+    .kanade {
+        width: calc(100% - 28px);
+        padding: 30px 0;
+    }
+
+    .marcy {
+        margin-bottom: 22px;
+    }
+
+    .ado {
+        margin-bottom: 10px;
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .marcy h1 {
+        margin-bottom: 12px;
+
+        font-size: 31px;
+
+        line-height: 1.08;
+
+        letter-spacing: -1.3px;
+    }
+
+    .marcy > p:not(.ado) {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .meiko {
+        margin-top: 25px;
+        padding: 20px 16px;
+    }
+
+    .flower {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .rei {
+        gap: 16px;
+    }
+
+    .asuka {
+        gap: 7px;
+    }
+
+    .asuka label {
+        font-size: 11px;
+    }
+
+    .asuka input,
+    .asuka select {
+        min-height: 47px;
+
+        padding: 11px 13px;
+
+        font-size: 13px;
+    }
+
+    .sonic {
+        grid-template-columns: 1fr;
+    }
+
+    .yor {
+        min-height: 47px;
+        font-size: 12px;
+    }
+
+    .iris {
+        width: calc(100% - 28px);
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-bottom: 30px;
+    }
+
+    .celeste,
+    .ren {
+        padding: 19px;
+    }
+
+    .celeste h2 {
+        font-size: 18px;
+    }
+
+    .lilith {
+        margin: 22px 0;
+    }
+
+    .nyan {
+        padding: 16px;
+    }
+
+    .nyan h2 {
+        font-size: 15px;
+    }
+
+    .lilac {
+        flex: 1;
+
+        min-width: 0;
+
+        padding: 9px 7px;
+
+        font-size: 10px;
+    }
+
+    .kira {
+        margin-top: 30px;
+    }
+
+    .mavis {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .seraph {
+        padding: 18px;
+        gap: 19px;
+    }
+
+    .vivi {
+        gap: 11px;
+    }
+
+    .chihiro {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .vivi h3 {
+        font-size: 14px;
+    }
+
+    .vivi p {
+        font-size: 10px;
+    }
+
+    .yuna {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .yuna strong {
+        font-size: 19px;
+    }
+
+    .suki {
+        display: none;
+    }
+
+    .raven {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .raven span {
+        font-size: 9px;
+    }
+
+    .raven strong {
+        font-size: 12px;
+    }
+
+    .morrigan {
+        margin-bottom: 22px;
+        font-size: 11px;
+    }
+
+    .aster {
+        margin-top: 20px;
+        padding: 20px 15px;
+    }
+
+    .selene {
+        gap: 11px;
+        padding-bottom: 18px;
+    }
+
+    .selene h2 {
+        font-size: 17px;
+    }
+
+    .selene p {
+        font-size: 10px;
+    }
+
+    .orion {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 25px 5px;
+    }
+
+    .destino strong {
+        font-size: 25px;
+    }
+
+    .trajeto {
+        gap: 5px;
+    }
+
+    .trajeto div {
+        display: none;
+    }
+
+    .cassio {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .nova-card {
+        padding: 16px;
+    }
+
+    .payton {
+        padding: 19px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+    }
+
+    .payton h2 {
+        font-size: 24px;
+    }
+
+    .payton .yor {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .selena {
+        width: calc(100% - 28px);
+        margin: 35px auto;
+    }
+
+    .stella {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 20px;
+
+        font-size: 28px;
+    }
+
+    .selena h1 {
+        font-size: 31px;
+        line-height: 1.1;
+    }
+
+    .cassie-text {
+        margin-bottom: 25px;
+        font-size: 13px;
+    }
+
+    .celine {
+        padding: 20px 16px;
+    }
+
+    .marina {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding-bottom: 17px;
+    }
+
+    .marina h2 {
+        font-size: 18px;
+    }
+
+    .violetta {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 22px 5px;
+    }
+
+    .location strong {
+        font-size: 13px;
+    }
+
+    .arrow {
+        font-size: 20px;
+        transform: rotate(90deg);
+    }
+
+    .total {
+        gap: 15px;
+    }
+
+    .total strong {
+        font-size: 20px;
+    }
+
+    .actions {
+        gap: 12px;
+    }
+
+    .tabs {
+        margin: 25px 0;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab {
+        flex-shrink: 0;
+
+        padding: 10px 15px;
+
+        font-size: 11px;
+    }
+
+    .viagens-section {
+        margin-bottom: 30px;
+    }
+
+    .section-heading {
+        gap: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .section-heading span {
+        font-size: 10px;
+    }
+
+    .viagens-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .viagem-card {
+        padding: 18px;
+        gap: 18px;
+    }
+
+    .viagem-topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .companhia {
+        gap: 10px;
+    }
+
+    .companhia h3 {
+        font-size: 14px;
+    }
+
+    .status {
+        align-self: flex-start;
+    }
+
+    .rota {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        padding: 18px 0;
+    }
+
+    .linha-rota {
+        display: none;
+    }
+
+    .cidade strong {
+        font-size: 20px;
+    }
+
+    .viagem-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .viagem-info span {
+        font-size: 9px;
+    }
+
+    .viagem-info strong {
+        font-size: 12px;
+    }
+
+    .historico-card {
+        padding: 18px;
+        align-items: flex-start;
+    }
+
+    .historico-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .historico-card h3 {
+        font-size: 13px;
+    }
+
+    .historico-card p {
+        font-size: 11px;
+    }
+
+    .nova-viagem {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+    }
+
+    .nova-viagem h2 {
+        font-size: 18px;
+    }
+
+    .nova-viagem p {
+        font-size: 11px;
+    }
+
+    .nova-viagem .yor {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .radiohead {
+        padding: 20px 15px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .bowie {
+        padding: 12px;
+    }
+
+    .luka {
+        font-size: 19px;
+        letter-spacing: 2.5px;
+    }
+
+    .len {
+        width: 34px;
+        height: 34px;
+    }
+
+    .kaito {
+        gap: 0;
+        margin-top: 10px;
+    }
+
+    .rin {
+        padding: 5px 2px;
+        font-size: 10px;
+    }
+
+    .kanade {
+        width: calc(100% - 24px);
+        padding-top: 25px;
+    }
+
+    .marcy h1 {
+        font-size: 29px;
+    }
+
+    .marcy > p:not(.ado) {
+        font-size: 12px;
+    }
+
+    .meiko {
+        padding: 18px 14px;
+    }
+
+    .asuka input,
+    .asuka select {
+        font-size: 12px;
+    }
+
+    .lilac {
+        padding: 8px 5px;
+        font-size: 9px;
+    }
+
+    .seraph {
+        padding: 16px;
+    }
+
+    .raven {
+        flex-wrap: wrap;
+    }
+
+    .raven div {
+        min-width: calc(50% - 5px);
+    }
+
+    .aster {
+        padding: 17px 13px;
+    }
+
+    .destino strong {
+        font-size: 23px;
+    }
+
+    .nova-card {
+        padding: 14px;
+    }
+
+    .nova-card strong {
+        font-size: 12px;
+    }
+
+    .selena h1 {
+        font-size: 29px;
+    }
+
+    .celine {
+        padding: 17px 14px;
+    }
+
+    .total strong {
+        font-size: 18px;
+    }
+
+    .viagem-card {
+        padding: 16px;
+    }
+
+    .viagem-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nova-viagem {
+        padding: 17px;
     }
 
 }
