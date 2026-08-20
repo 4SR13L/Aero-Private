@@ -1,25 +1,4 @@
-:root {
-    --miku-blue: #6257f5;
-    --miku-light: #7469ff;
-
-    --bowie-night: #111827;
-    --luka-space: #172036;
-
-    --gumi-white: #ffffff;
-    --teto-cloud: #f5f6fa;
-
-    --ado-gray: #687080;
-    --ado-border: #e1e4ea;
-
-    --rei-round: 10px;
-    --meiko-round: 18px;
-
-    --freddie-shadow:
-        0 10px 30px rgba(17, 24, 39, 0.08);
-
-    --hayley-shadow:
-        0 8px 25px rgba(98, 87, 245, 0.25);
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -33,90 +12,78 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: "Inter", sans-serif;
-    color: var(--bowie-night);
-    background: var(--teto-cloud);
-    overflow-x: hidden;
-}
-
-img {
-    display: block;
-    max-width: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #f4f5f8;
+    color: #101522;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
 button,
-input,
-select {
-    font: inherit;
-}
-
-button {
-    border: none;
+input {
+    font-family: inherit;
 }
 
 .miku {
     width: 100%;
-    background: var(--gumi-white);
-    border-bottom: 1px solid var(--ado-border);
+    background: #ffffff;
+    border-bottom: 1px solid #e3e5eb;
+    position: sticky;
+    top: 0;
+    z-index: 20;
 }
 
 .bowie {
-    width: min(1200px, 92%);
-    min-height: 64px;
+    max-width: 1180px;
+    min-height: 76px;
     margin: 0 auto;
-
+    padding: 0 28px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
 }
 
 .luka {
-    color: var(--miku-blue);
-    font-size: 24px;
+    color: #635bff;
+    font-size: 25px;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 .kaito {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-left: auto;
+    justify-content: center;
+    gap: 8px;
 }
 
 .rin {
-    position: relative;
-    color: var(--ado-gray);
-    font-size: 13px;
+    padding: 10px 14px;
+    color: #59606d;
+    font-size: 14px;
     font-weight: 600;
-    transition: color 0.2s ease;
+    border-radius: 9px;
+    transition: 0.2s ease;
 }
 
 .rin:hover {
-    color: var(--miku-blue);
+    color: #635bff;
+    background: #f1efff;
 }
 
 .len {
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-shrink: 0;
-
+    width: 40px;
+    height: 40px;
+    border: 0;
     border-radius: 50%;
-
-    color: var(--gumi-white);
-    background: var(--bowie-night);
-
+    background: #101827;
+    color: white;
     cursor: pointer;
+    font-size: 17px;
 }
 
 main {
@@ -124,58 +91,54 @@ main {
 }
 
 .kanade {
-    width: min(1100px, 92%);
+    width: min(1100px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 55px 0;
+    padding: 55px 0 70px;
 }
 
 .marcy {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 .ado {
     margin-bottom: 12px;
-    color: var(--miku-blue);
-    font-size: 11px;
+    color: #635bff;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 3px;
 }
 
 .marcy h1 {
     max-width: 700px;
-    margin-bottom: 15px;
-
-    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 14px;
+    font-size: clamp(34px, 5vw, 56px);
     line-height: 1.05;
     letter-spacing: -2px;
 }
 
-.marcy > p:not(.ado) {
-    max-width: 600px;
-    color: var(--ado-gray);
-    font-size: 15px;
+.marcy > p:last-child {
+    max-width: 580px;
+    color: #687080;
+    font-size: 17px;
     line-height: 1.7;
 }
 
 .meiko {
-    max-width: 850px;
-    margin: 35px auto 0;
+    background: #ffffff;
     padding: 30px;
-
-    border-radius: var(--meiko-round);
-    background: var(--gumi-white);
-    box-shadow: var(--freddie-shadow);
+    border-radius: 24px;
+    box-shadow: 0 14px 45px rgba(20, 28, 45, 0.08);
 }
 
 .flower {
     margin-bottom: 25px;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .rei {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
 .asuka {
@@ -185,394 +148,319 @@ main {
 }
 
 .asuka label {
-    color: var(--ado-gray);
-    font-size: 12px;
+    color: #535b69;
+    font-size: 13px;
     font-weight: 600;
 }
 
-.asuka input,
-.asuka select {
+.asuka input {
     width: 100%;
-    min-height: 48px;
-
-    padding: 12px 15px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--rei-round);
-
+    min-height: 50px;
+    padding: 0 16px;
+    border: 1px solid #dfe2e8;
+    border-radius: 12px;
     outline: none;
-
-    color: var(--bowie-night);
-    background: var(--teto-cloud);
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+    background: #f7f8fa;
+    color: #151a24;
+    font-size: 15px;
+    transition: 0.2s ease;
 }
 
-.asuka input:focus,
-.asuka select:focus {
-    border-color: var(--miku-blue);
-
-    box-shadow:
-        0 0 0 3px rgba(98, 87, 245, 0.12);
-}
-
-.asuka input::placeholder {
-    color: #8b92a0;
+.asuka input:focus {
+    border-color: #635bff;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
 }
 
 .sonic {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 15px;
+}
+
+.sonic .asuka {
+    flex: 1;
 }
 
 .yor {
-    width: 100%;
+    display: inline-flex;
     min-height: 48px;
-
-    padding: 13px 20px;
-
-    display: flex;
+    padding: 0 24px;
     align-items: center;
     justify-content: center;
-
-    border-radius: var(--rei-round);
-
-    color: var(--gumi-white);
-    background: var(--miku-blue);
-
-    font-size: 13px;
+    border: 0;
+    border-radius: 11px;
+    background: #635bff;
+    color: white;
+    font-size: 14px;
     font-weight: 700;
-
     cursor: pointer;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .yor:hover {
-    transform: translateY(-2px);
-    background: var(--miku-light);
-    box-shadow: var(--hayley-shadow);
+    background: #5148ed;
+    transform: translateY(-1px);
 }
 
-.iris {
-    width: min(1100px, 92%);
-    margin: 0 auto 50px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.celeste,
-.ren {
-    padding: 25px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-}
-
-.celeste h2 {
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.celeste p {
-    color: var(--ado-gray);
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.atlas {
-    display: grid;
-    gap: 15px;
-}
-
-.ren {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.ren h3 {
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.ren p {
-    color: var(--ado-gray);
-    font-size: 11px;
-    line-height: 1.5;
-}
-
-.zephyr {
-    width: 45px;
-    height: 45px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-shrink: 0;
-
-    border-radius: 13px;
-    background: #eeedff;
-}
-
-.lilith {
-    margin: 30px 0;
-}
-
-.nyan {
-    padding: 20px;
-
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-}
-
-.nyan h2 {
+.radiohead {
     width: 100%;
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.lilac {
-    padding: 9px 15px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: 30px;
-
-    color: var(--ado-gray);
-    background: var(--teto-cloud);
-
+    padding: 28px 20px;
+    text-align: center;
+    color: #858b97;
     font-size: 12px;
+    border-top: 1px solid #e3e5eb;
+    background: #ffffff;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e1e4e9;
+}
+
+.tab {
+    padding: 10px 15px;
+    border-radius: 9px;
+    color: #737a87;
+    font-size: 13px;
     font-weight: 600;
-
-    cursor: pointer;
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+    transition: 0.2s ease;
 }
 
-.lilac:hover {
-    color: var(--miku-blue);
-    border-color: var(--miku-blue);
-    background: #eeedff;
+.tab:hover {
+    background: #f0efff;
+    color: #635bff;
 }
 
-.kira {
-    margin-top: 40px;
+.active-tab {
+    background: #635bff;
+    color: #ffffff;
 }
 
-.mavis {
+.viagens-section {
+    width: 100%;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+}
+
+.section-heading span {
+    color: #777e8b;
+    font-size: 13px;
+}
+
+.viagens-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 18px;
 }
 
-.seraph {
-    padding: 25px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-    box-shadow: var(--freddie-shadow);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+.viagem-card {
+    min-width: 0;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e4e6eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(20, 28, 45, 0.05);
+    transition: 0.2s ease;
 }
 
-.seraph:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 16px 35px rgba(17, 24, 39, 0.13);
+.viagem-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 13px 30px rgba(20, 28, 45, 0.09);
 }
 
-.vivi {
+.viagem-topo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.companhia {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 11px;
 }
 
 .chihiro {
-    width: 48px;
-    height: 48px;
-
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
+    background: #efeeff;
+    color: #635bff;
+    font-size: 18px;
+}
 
+.companhia h3 {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.companhia p {
+    margin-top: 3px;
+    color: #858b97;
+    font-size: 11px;
+}
+
+.status {
     flex-shrink: 0;
-
-    border-radius: 14px;
-    background: #eeedff;
-
-    font-size: 21px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: #eaf8f0;
+    color: #21844b;
+    font-size: 10px;
+    font-weight: 700;
 }
 
-.vivi h3 {
-    margin-bottom: 4px;
-    font-size: 16px;
+.rota {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    border-top: 1px solid #eceef2;
+    border-bottom: 1px solid #eceef2;
 }
 
-.vivi p {
-    color: var(--ado-gray);
+.cidade {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cidade:last-child {
+    text-align: right;
+}
+
+.cidade span {
+    color: #5e6572;
     font-size: 12px;
 }
 
-.yuna {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-
-    align-items: center;
-    gap: 12px;
-
-    text-align: center;
+.cidade strong {
+    font-size: 21px;
 }
 
-.yuna div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.yuna strong {
-    font-size: 20px;
-}
-
-.yuna span {
-    color: var(--ado-gray);
-    font-size: 11px;
-}
-
-.suki {
-    color: var(--miku-blue);
+.cidade small {
+    color: #9298a3;
     font-size: 10px;
+    font-weight: 700;
+}
+
+.linha-rota {
+    color: #635bff;
+    font-size: 13px;
     white-space: nowrap;
 }
 
-.raven {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid var(--ado-border);
+.viagem-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 18px 0;
 }
 
-.raven div {
+.viagem-info div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
 }
 
-.raven span {
-    color: var(--ado-gray);
-    font-size: 11px;
+.viagem-info span {
+    color: #858b97;
+    font-size: 10px;
 }
 
-.raven strong {
-    font-size: 14px;
+.viagem-info strong {
+    font-size: 12px;
 }
 
-.violet-text {
-    color: var(--miku-blue);
+.detalhes-link {
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #f0efff;
+    color: #635bff;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.detalhes-link:hover {
+    background: #635bff;
+    color: white;
 }
 
 .morrigan {
     display: inline-block;
-
-    margin-bottom: 30px;
-
-    color: var(--miku-blue);
-
+    margin-bottom: 20px;
+    color: #635bff;
     font-size: 13px;
     font-weight: 600;
-
-    transition: transform 0.2s ease;
-}
-
-.morrigan:hover {
-    transform: translateX(-4px);
 }
 
 .aster {
-    margin-top: 35px;
     padding: 30px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-    box-shadow: var(--freddie-shadow);
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(20, 28, 45, 0.07);
 }
 
 .selene {
     display: flex;
     align-items: center;
     gap: 15px;
-
     padding-bottom: 25px;
-
-    border-bottom: 1px solid var(--ado-border);
-}
-
-.selene h2 {
-    margin-bottom: 4px;
-    font-size: 20px;
-}
-
-.selene p {
-    color: var(--ado-gray);
-    font-size: 12px;
+    border-bottom: 1px solid #e8e9ed;
 }
 
 .lilith-text {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    color: #635bff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
 
-    color: var(--miku-blue) !important;
+.selene h2 {
+    font-size: 22px;
+}
 
-    font-size: 10px !important;
-    font-weight: 700;
-
-    letter-spacing: 1px;
+.selene p:last-child {
+    margin-top: 4px;
+    color: #858b97;
+    font-size: 12px;
 }
 
 .orion {
-    padding: 35px 10px;
-
     display: grid;
-
     grid-template-columns: 1fr auto 1fr;
-
     align-items: center;
-    gap: 25px;
-
-    text-align: center;
+    gap: 30px;
+    padding: 40px 15px;
 }
 
 .destino {
@@ -581,882 +469,372 @@ main {
     gap: 7px;
 }
 
+.destino:last-child {
+    text-align: right;
+}
+
 .destino span {
-    color: var(--ado-gray);
-    font-size: 11px;
-}
-
-.destino strong {
-    font-size: 28px;
-}
-
-.destino p {
-    color: var(--ado-gray);
+    color: #656d79;
     font-size: 13px;
 }
 
-.trajeto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-
-    color: var(--miku-blue);
+.destino strong {
+    font-size: 32px;
 }
 
-.trajeto span {
-    color: var(--ado-gray);
-    font-size: 10px;
+.destino p {
+    color: #9298a3;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.trajeto {
+    color: #635bff;
+    text-align: center;
+    font-size: 13px;
 }
 
 .trajeto div {
-    font-size: 10px;
+    margin-top: 10px;
     white-space: nowrap;
 }
 
 .lyra {
-    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #e8e9ed;
 }
 
 .lyra h2 {
     margin-bottom: 18px;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .cassio {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
 .nova-card {
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--rei-round);
-
-    background: var(--gumi-white);
+    padding: 16px;
+    border-radius: 12px;
+    background: #f7f7fa;
 }
 
 .nova-card span {
-    color: var(--ado-gray);
-    font-size: 11px;
+    display: block;
+    margin-bottom: 7px;
+    color: #858b97;
+    font-size: 10px;
 }
 
 .nova-card strong {
-    font-size: 14px;
-}
-
-.payton {
-    margin-top: 30px;
-    padding: 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
-
-    border-radius: var(--meiko-round);
-
-    color: var(--gumi-white);
-    background: var(--bowie-night);
-
-    box-shadow: var(--freddie-shadow);
-}
-
-.payton p {
-    margin-bottom: 5px;
-    color: #c8cedb;
     font-size: 12px;
 }
 
-.payton h2 {
-    font-size: 28px;
+.payton {
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid #e8e9ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.payton .yor {
-    width: auto;
-    min-width: 160px;
+.payton p {
+    color: #858b97;
+    font-size: 11px;
+}
+
+.payton h2 {
+    margin-top: 5px;
+    color: #635bff;
+    font-size: 22px;
 }
 
 .selena {
-    width: min(850px, 92%);
-
-    margin: 60px auto;
-
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 0;
     text-align: center;
 }
 
 .stella {
-    width: 75px;
-    height: 75px;
-
-    margin: 0 auto 25px;
-
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
-    color: var(--gumi-white);
-    background: var(--miku-blue);
-
-    font-size: 34px;
+    background: #eaf8f0;
+    color: #21844b;
+    font-size: 27px;
     font-weight: 700;
-
-    box-shadow: var(--hayley-shadow);
-}
-
-.selena > .ado {
-    margin-bottom: 12px;
 }
 
 .selena h1 {
     margin-bottom: 12px;
-
-    font-size: clamp(32px, 5vw, 48px);
-
-    letter-spacing: -1px;
+    font-size: 35px;
 }
 
 .cassie-text {
-    max-width: 500px;
-
-    margin: 0 auto 35px;
-
-    color: var(--ado-gray);
-
+    margin-bottom: 30px;
+    color: #737a87;
+    font-size: 14px;
     line-height: 1.6;
 }
 
 .celine {
-    padding: 30px;
-
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e4e6eb;
+    border-radius: 18px;
     text-align: left;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-    box-shadow: var(--freddie-shadow);
+    box-shadow: 0 10px 30px rgba(20, 28, 45, 0.05);
 }
 
 .marina {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    gap: 15px;
-
-    padding-bottom: 22px;
-
-    border-bottom: 1px solid var(--ado-border);
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e9ed;
 }
 
 .marina h2 {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .confirmed {
-    padding: 6px 10px;
-
+    padding: 7px 11px;
     border-radius: 20px;
-
-    color: #48634f;
-    background: #e8f4eb;
-
+    background: #eaf8f0;
+    color: #21844b;
     font-size: 10px;
     font-weight: 700;
-
-    letter-spacing: 0.5px;
 }
 
 .violetta {
-    padding: 28px 10px;
-
     display: grid;
-
     grid-template-columns: 1fr auto 1fr;
-
     align-items: center;
-
     gap: 20px;
-
-    text-align: center;
+    padding: 25px 0;
 }
 
 .location {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
+}
+
+.location:last-child {
+    text-align: right;
 }
 
 .location span {
-    color: var(--ado-gray);
-    font-size: 11px;
+    color: #858b97;
+    font-size: 10px;
 }
 
 .location strong {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .arrow {
-    color: var(--miku-blue);
-    font-size: 25px;
-    font-weight: 700;
+    color: #635bff;
+    font-size: 20px;
 }
 
 .total {
-    margin-top: 20px;
-    padding-top: 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border-top: 1px solid var(--ado-border);
+    padding-top: 20px;
+    border-top: 1px solid #e8e9ed;
 }
 
 .total span {
-    color: var(--ado-gray);
-    font-size: 13px;
+    color: #858b97;
+    font-size: 12px;
 }
 
 .total strong {
-    color: var(--miku-blue);
-    font-size: 24px;
+    color: #635bff;
+    font-size: 20px;
 }
 
 .actions {
-    margin-top: 25px;
-
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    gap: 15px;
-}
-
-.actions .yor {
-    max-width: 300px;
+    gap: 10px;
 }
 
 .back-home {
-    color: var(--ado-gray);
-    font-size: 13px;
-    font-weight: 600;
-
-    transition: color 0.2s ease;
-}
-
-.back-home:hover {
-    color: var(--miku-blue);
-}
-
-.tabs {
-    margin: 35px 0 30px;
-
-    display: flex;
-    gap: 8px;
-
-    border-bottom: 1px solid var(--ado-border);
-}
-
-.tab {
-    padding: 12px 18px;
-
-    color: var(--ado-gray);
-
-    font-size: 13px;
-    font-weight: 600;
-
-    border-bottom: 2px solid transparent;
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.tab:hover {
-    color: var(--miku-blue);
-}
-
-.active-tab {
-    color: var(--miku-blue);
-    border-bottom-color: var(--miku-blue);
-}
-
-.viagens-section {
-    margin-bottom: 45px;
-}
-
-.section-heading {
-    margin-bottom: 18px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-.section-heading h2 {
-    font-size: 20px;
-}
-
-.section-heading span {
-    color: var(--ado-gray);
-    font-size: 12px;
-}
-
-.viagens-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-}
-
-.viagem-card {
-    padding: 25px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 25px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-    box-shadow: var(--freddie-shadow);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.viagem-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 16px 35px rgba(17, 24, 39, 0.13);
-}
-
-.viagem-topo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 15px;
-}
-
-.companhia {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.companhia h3 {
-    margin-bottom: 4px;
-    font-size: 16px;
-}
-
-.companhia p {
-    color: var(--ado-gray);
-    font-size: 12px;
-}
-
-.status {
-    padding: 6px 10px;
-
-    border-radius: 20px;
-
-    color: #48634f;
-    background: #e8f4eb;
-
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.rota {
-    padding: 25px 0;
-
-    display: grid;
-
-    grid-template-columns: 1fr auto 1fr;
-
-    align-items: center;
-
-    gap: 15px;
-
-    text-align: center;
-
-    border-top: 1px solid var(--ado-border);
-    border-bottom: 1px solid var(--ado-border);
-}
-
-.cidade {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.cidade span {
-    color: var(--ado-gray);
-    font-size: 12px;
-}
-
-.cidade strong {
-    font-size: 22px;
-}
-
-.cidade small {
-    color: var(--ado-gray);
-    font-size: 10px;
-}
-
-.linha-rota {
-    color: var(--miku-blue);
-    font-size: 10px;
-    white-space: nowrap;
-}
-
-.viagem-info {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 15px;
-}
-
-.viagem-info div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.viagem-info span {
-    color: var(--ado-gray);
-    font-size: 10px;
-}
-
-.viagem-info strong {
-    font-size: 13px;
-}
-
-.detalhes-link {
-    padding: 13px;
-
-    display: block;
-
-    text-align: center;
-
-    border-radius: var(--rei-round);
-
-    color: var(--gumi-white);
-    background: var(--miku-blue);
-
-    font-size: 13px;
-    font-weight: 700;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-.detalhes-link:hover {
-    transform: translateY(-2px);
-    background: var(--miku-light);
-}
-
-.historico-card {
-    padding: 25px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-
-    border: 1px solid var(--ado-border);
-    border-radius: var(--meiko-round);
-
-    background: var(--gumi-white);
-}
-
-.historico-icon {
-    width: 48px;
-    height: 48px;
-
+    min-height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    flex-shrink: 0;
-
-    border-radius: 14px;
-
-    color: var(--miku-blue);
-    background: #eeedff;
-
-    font-size: 20px;
-}
-
-.historico-card h3 {
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-
-.historico-card p {
-    color: var(--ado-gray);
+    color: #676e7b;
+    border: 1px solid #dfe2e8;
+    border-radius: 10px;
     font-size: 12px;
-    line-height: 1.5;
+    font-weight: 600;
+    transition: 0.2s ease;
 }
 
-.nova-viagem {
-    margin-top: 20px;
-    padding: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
-
-    border-radius: var(--meiko-round);
-
-    color: var(--gumi-white);
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--luka-space),
-            var(--bowie-night)
-        );
-
-    box-shadow: var(--freddie-shadow);
-}
-
-.nova-viagem h2 {
-    margin-bottom: 7px;
-    font-size: 20px;
-}
-
-.nova-viagem p {
-    color: #c8cedb;
-    font-size: 13px;
-}
-
-.nova-viagem .yor {
-    width: auto;
-    min-width: 160px;
-}
-
-.radiohead {
-    width: 100%;
-
-    padding: 25px 5%;
-
-    text-align: center;
-
-    border-top: 1px solid var(--ado-border);
-
-    background: var(--gumi-white);
-
-    color: var(--ado-gray);
-
-    font-size: 11px;
+.back-home:hover {
+    background: #ffffff;
+    color: #635bff;
 }
 
 @media (max-width: 850px) {
-
     .bowie {
-        width: 94%;
+        padding: 0 20px;
+    }
+
+    .kaito {
+        gap: 2px;
+    }
+
+    .rin {
+        padding: 9px 8px;
+        font-size: 12px;
     }
 
     .kanade {
-        width: 94%;
-    }
-
-    .iris {
-        width: 94%;
-    }
-
-    .mavis {
-        grid-template-columns: 1fr;
+        width: min(100% - 30px, 700px);
+        padding: 35px 0 50px;
     }
 
     .viagens-grid {
         grid-template-columns: 1fr;
     }
 
+    .cassio {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
-
-    body {
-        width: 100%;
-        font-size: 14px;
+    .miku {
+        position: relative;
     }
 
     .bowie {
-        width: 100%;
-
         min-height: auto;
-
-        padding: 13px 15px;
-
-        display: flex;
-
+        padding: 16px;
         flex-wrap: wrap;
-
-        gap: 0;
+        gap: 12px;
     }
 
     .luka {
-        font-size: 20px;
-        letter-spacing: 3px;
+        font-size: 22px;
+    }
+
+    .kaito {
+        width: 100%;
+        order: 3;
+        justify-content: space-between;
+        overflow-x: auto;
+        padding-top: 3px;
+    }
+
+    .rin {
+        flex-shrink: 0;
+        padding: 9px 10px;
+        font-size: 11px;
     }
 
     .len {
         width: 36px;
         height: 36px;
-
-        margin-left: auto;
-    }
-
-    .kaito {
-        order: 3;
-
-        width: 100%;
-
-        margin: 12px 0 0;
-
-        padding-top: 11px;
-
-        display: flex;
-
-        justify-content: center;
-
-        gap: 0;
-
-        border-top: 1px solid var(--ado-border);
-    }
-
-    .rin {
-        flex: 1;
-
-        padding: 6px 4px;
-
-        text-align: center;
-
-        font-size: 11px;
     }
 
     .kanade {
-        width: calc(100% - 28px);
-        padding: 30px 0;
+        width: calc(100% - 24px);
+        padding: 25px 0 35px;
     }
 
     .marcy {
         margin-bottom: 22px;
     }
 
-    .ado {
-        margin-bottom: 10px;
-
-        font-size: 9px;
-
-        letter-spacing: 2.5px;
-    }
-
     .marcy h1 {
-        margin-bottom: 12px;
-
-        font-size: 31px;
-
-        line-height: 1.08;
-
-        letter-spacing: -1.3px;
+        font-size: 35px;
+        letter-spacing: -1.5px;
     }
 
-    .marcy > p:not(.ado) {
-        font-size: 13px;
-        line-height: 1.55;
-    }
-
-    .meiko {
-        margin-top: 25px;
-        padding: 20px 16px;
-    }
-
-    .flower {
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
-
-    .rei {
-        gap: 16px;
-    }
-
-    .asuka {
-        gap: 7px;
-    }
-
-    .asuka label {
-        font-size: 11px;
-    }
-
-    .asuka input,
-    .asuka select {
-        min-height: 47px;
-
-        padding: 11px 13px;
-
-        font-size: 13px;
-    }
-
-    .sonic {
-        grid-template-columns: 1fr;
-    }
-
-    .yor {
-        min-height: 47px;
-        font-size: 12px;
-    }
-
-    .iris {
-        width: calc(100% - 28px);
-
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-        margin-bottom: 30px;
-    }
-
-    .celeste,
-    .ren {
-        padding: 19px;
-    }
-
-    .celeste h2 {
-        font-size: 18px;
-    }
-
-    .lilith {
-        margin: 22px 0;
-    }
-
-    .nyan {
-        padding: 16px;
-    }
-
-    .nyan h2 {
-        font-size: 15px;
-    }
-
-    .lilac {
-        flex: 1;
-
-        min-width: 0;
-
-        padding: 9px 7px;
-
-        font-size: 10px;
-    }
-
-    .kira {
-        margin-top: 30px;
-    }
-
-    .mavis {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .seraph {
-        padding: 18px;
-        gap: 19px;
-    }
-
-    .vivi {
-        gap: 11px;
-    }
-
-    .chihiro {
-        width: 42px;
-        height: 42px;
-        font-size: 18px;
-    }
-
-    .vivi h3 {
+    .marcy > p:last-child {
         font-size: 14px;
     }
 
-    .vivi p {
-        font-size: 10px;
+    .meiko {
+        padding: 20px;
+        border-radius: 18px;
     }
 
-    .yuna {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .yuna strong {
+    .flower {
         font-size: 19px;
     }
 
-    .suki {
-        display: none;
+    .sonic {
+        flex-direction: column;
     }
 
-    .raven {
-        flex-direction: row;
-        gap: 10px;
+    .tabs {
+        overflow-x: auto;
+        margin-bottom: 22px;
     }
 
-    .raven span {
+    .tab {
+        flex-shrink: 0;
+    }
+
+    .viagem-card {
+        padding: 17px;
+    }
+
+    .viagem-topo {
+        align-items: flex-start;
+    }
+
+    .status {
         font-size: 9px;
     }
 
-    .raven strong {
-        font-size: 12px;
+    .rota {
+        gap: 7px;
     }
 
-    .morrigan {
-        margin-bottom: 22px;
-        font-size: 11px;
+    .cidade strong {
+        font-size: 18px;
     }
 
-    .aster {
-        margin-top: 20px;
-        padding: 20px 15px;
-    }
-
-    .selene {
-        gap: 11px;
-        padding-bottom: 18px;
-    }
-
-    .selene h2 {
-        font-size: 17px;
-    }
-
-    .selene p {
+    .cidade span {
         font-size: 10px;
     }
 
+    .linha-rota {
+        font-size: 10px;
+    }
+
+    .viagem-info {
+        gap: 7px;
+    }
+
+    .aster {
+        padding: 20px;
+        border-radius: 17px;
+    }
+
     .orion {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 25px 5px;
+        gap: 10px;
+        padding: 30px 0;
     }
 
     .destino strong {
@@ -1464,260 +842,62 @@ main {
     }
 
     .trajeto {
-        gap: 5px;
+        font-size: 10px;
     }
 
     .trajeto div {
-        display: none;
+        font-size: 9px;
     }
 
     .cassio {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .nova-card {
-        padding: 16px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .payton {
-        padding: 19px;
-
-        flex-direction: column;
-
         align-items: stretch;
-
-        gap: 18px;
-    }
-
-    .payton h2 {
-        font-size: 24px;
+        flex-direction: column;
     }
 
     .payton .yor {
         width: 100%;
-        min-width: 0;
     }
 
     .selena {
-        width: calc(100% - 28px);
-        margin: 35px auto;
-    }
-
-    .stella {
-        width: 62px;
-        height: 62px;
-
-        margin-bottom: 20px;
-
-        font-size: 28px;
+        width: calc(100% - 24px);
+        padding: 35px 0;
     }
 
     .selena h1 {
-        font-size: 31px;
-        line-height: 1.1;
-    }
-
-    .cassie-text {
-        margin-bottom: 25px;
-        font-size: 13px;
+        font-size: 28px;
     }
 
     .celine {
-        padding: 20px 16px;
+        padding: 18px;
     }
 
     .marina {
         align-items: flex-start;
-
         flex-direction: column;
-
-        gap: 10px;
-
-        padding-bottom: 17px;
-    }
-
-    .marina h2 {
-        font-size: 18px;
+        gap: 12px;
     }
 
     .violetta {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-        padding: 22px 5px;
+        gap: 10px;
     }
 
     .location strong {
-        font-size: 13px;
-    }
-
-    .arrow {
-        font-size: 20px;
-        transform: rotate(90deg);
-    }
-
-    .total {
-        gap: 15px;
-    }
-
-    .total strong {
-        font-size: 20px;
-    }
-
-    .actions {
-        gap: 12px;
-    }
-
-    .tabs {
-        margin: 25px 0;
-
-        overflow-x: auto;
-
-        scrollbar-width: none;
-    }
-
-    .tabs::-webkit-scrollbar {
-        display: none;
-    }
-
-    .tab {
-        flex-shrink: 0;
-
-        padding: 10px 15px;
-
         font-size: 11px;
     }
-
-    .viagens-section {
-        margin-bottom: 30px;
-    }
-
-    .section-heading {
-        gap: 10px;
-    }
-
-    .section-heading h2 {
-        font-size: 18px;
-    }
-
-    .section-heading span {
-        font-size: 10px;
-    }
-
-    .viagens-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .viagem-card {
-        padding: 18px;
-        gap: 18px;
-    }
-
-    .viagem-topo {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .companhia {
-        gap: 10px;
-    }
-
-    .companhia h3 {
-        font-size: 14px;
-    }
-
-    .status {
-        align-self: flex-start;
-    }
-
-    .rota {
-        grid-template-columns: 1fr;
-
-        gap: 9px;
-
-        padding: 18px 0;
-    }
-
-    .linha-rota {
-        display: none;
-    }
-
-    .cidade strong {
-        font-size: 20px;
-    }
-
-    .viagem-info {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .viagem-info span {
-        font-size: 9px;
-    }
-
-    .viagem-info strong {
-        font-size: 12px;
-    }
-
-    .historico-card {
-        padding: 18px;
-        align-items: flex-start;
-    }
-
-    .historico-icon {
-        width: 42px;
-        height: 42px;
-    }
-
-    .historico-card h3 {
-        font-size: 13px;
-    }
-
-    .historico-card p {
-        font-size: 11px;
-    }
-
-    .nova-viagem {
-        padding: 20px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 18px;
-    }
-
-    .nova-viagem h2 {
-        font-size: 18px;
-    }
-
-    .nova-viagem p {
-        font-size: 11px;
-    }
-
-    .nova-viagem .yor {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .radiohead {
-        padding: 20px 15px;
-        font-size: 10px;
-    }
-
 }
 
-@media (max-width: 360px) {
-
+@media (max-width: 400px) {
     .bowie {
-        padding: 12px;
+        padding: 13px 12px;
     }
 
     .luka {
-        font-size: 19px;
-        letter-spacing: 2.5px;
+        font-size: 20px;
+        letter-spacing: 4px;
     }
 
     .len {
@@ -1727,142 +907,127 @@ main {
 
     .kaito {
         gap: 0;
-        margin-top: 10px;
     }
 
     .rin {
-        padding: 5px 2px;
+        padding: 8px 7px;
         font-size: 10px;
     }
 
     .kanade {
-        width: calc(100% - 24px);
-        padding-top: 25px;
+        width: calc(100% - 20px);
+        padding-top: 22px;
     }
 
     .marcy h1 {
-        font-size: 29px;
+        font-size: 31px;
     }
 
-    .marcy > p:not(.ado) {
-        font-size: 12px;
+    .marcy > p:last-child {
+        font-size: 13px;
     }
 
     .meiko {
-        padding: 18px 14px;
-    }
-
-    .asuka input,
-    .asuka select {
-        font-size: 12px;
-    }
-
-    .lilac {
-        padding: 8px 5px;
-        font-size: 9px;
-    }
-
-    .seraph {
-        padding: 16px;
-    }
-
-    .raven {
-        flex-wrap: wrap;
-    }
-
-    .raven div {
-        min-width: calc(50% - 5px);
-    }
-
-    .aster {
-        padding: 17px 13px;
-    }
-
-    .destino strong {
-        font-size: 23px;
-    }
-
-    .nova-card {
-        padding: 14px;
-    }
-
-    .nova-card strong {
-        font-size: 12px;
-    }
-
-    .selena h1 {
-        font-size: 29px;
-    }
-
-    .celine {
-        padding: 17px 14px;
-    }
-
-    .total strong {
-        font-size: 18px;
-    }
-
-    .viagem-card {
-        padding: 16px;
-    }
-
-    .viagem-info {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .nova-viagem {
         padding: 17px;
     }
 
-}
+    .viagem-card {
+        padding: 14px;
+    }
 
-.aviao-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: var(--rei-round);
-}
+    .companhia h3 {
+        font-size: 12px;
+    }
 
-.aero-fundo {
-    position: relative;
-    min-height: calc(100vh - 64px);
+    .companhia p {
+        font-size: 9px;
+    }
 
-    background-image: url("../imagens/img1.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+    .chihiro {
+        width: 36px;
+        height: 36px;
+    }
 
-.aero-sombra {
-    position: absolute;
-    inset: 0;
+    .rota {
+        grid-template-columns: 1fr 60px 1fr;
+        gap: 4px;
+    }
 
-    background: rgba(5, 15, 30, 0.45);
-}
+    .cidade strong {
+        font-size: 17px;
+    }
 
-.aero-conteudo {
-    position: relative;
-    z-index: 1;
-}
+    .cidade span {
+        font-size: 9px;
+    }
 
-.aero-fundo .marcy h1,
-.aero-fundo .marcy > p:not(.ado) {
-    color: white;
-}
+    .cidade small {
+        font-size: 8px;
+    }
 
-.aero-fundo .ado {
-    color: #8c82ff;
-}
+    .linha-rota {
+        font-size: 8px;
+        overflow: hidden;
+    }
 
-.aviao-img {
-    height: 130px;
-}
+    .viagem-info span {
+        font-size: 8px;
+    }
 
-.aero-fundo {
-    background-attachment: scroll;
-    background-position: center top;
-}
+    .viagem-info strong {
+        font-size: 10px;
+    }
 
-.aero-sombra {
-    background: rgba(5, 15, 30, 0.52);
+    .detalhes-link {
+        min-height: 39px;
+        font-size: 11px;
+    }
+
+    .aster {
+        padding: 16px;
+    }
+
+    .selene h2 {
+        font-size: 18px;
+    }
+
+    .orion {
+        grid-template-columns: 1fr 55px 1fr;
+    }
+
+    .destino strong {
+        font-size: 22px;
+    }
+
+    .destino span {
+        font-size: 10px;
+    }
+
+    .cassio {
+        gap: 8px;
+    }
+
+    .nova-card {
+        padding: 12px;
+    }
+
+    .nova-card strong {
+        font-size: 10px;
+    }
+
+    .selena h1 {
+        font-size: 25px;
+    }
+
+    .violetta {
+        grid-template-columns: 1fr 25px 1fr;
+    }
+
+    .location strong {
+        font-size: 10px;
+    }
+
+    .total strong {
+        font-size: 17px;
+    }
 }
