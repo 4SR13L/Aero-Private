@@ -2,19 +2,16 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Buscar - AERO</title>
+    <title>AERO | Buscar</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -26,15 +23,10 @@
             <a href="index.html" class="luka">AERO</a>
 
             <nav class="kaito">
-
                 <a href="index.html" class="rin">Início</a>
-
-                <a href="buscar.html" class="rin">Buscar</a>
-
-                <a href="resultados.html" class="rin">Viagens</a>
-
-                <a href="agenda.html" class="rin">Agenda</a>
-
+                <a href="buscar.html" class="rin active-rin">Buscar</a>
+                <a href="viagens.html" class="rin">Viagens</a>
+                <a href="agendamento.html" class="rin">Agenda</a>
             </nav>
 
             <button class="len">♧</button>
@@ -45,7 +37,7 @@
 
     <main>
 
-        <section class="kanade">
+        <section class="pagina">
 
             <div class="marcy">
 
@@ -54,53 +46,49 @@
                 <h1>Encontre sua viagem.</h1>
 
                 <p>
-                    Informe os detalhes da sua viagem
-                    para encontrar as melhores opções.
+                    Informe os detalhes da sua viagem para
+                    encontrar as melhores opções.
                 </p>
 
             </div>
 
-            <section class="meiko">
+            <div class="meiko">
 
-                <h2 class="flower">
-                    Dados da viagem
-                </h2>
+                <h2 class="flower">Dados da viagem</h2>
 
                 <form class="rei">
 
-                    <div class="asuka">
-
-                        <label for="origem">
-                            De onde você vai?
-                        </label>
-
-                        <input
-                            type="text"
-                            id="origem"
-                            value="São Paulo, SP">
-
-                    </div>
-
-                    <div class="asuka">
-
-                        <label for="destino">
-                            Para onde você vai?
-                        </label>
-
-                        <input
-                            type="text"
-                            id="destino"
-                            value="Rio de Janeiro, RJ">
-
-                    </div>
-
-                    <div class="sonic">
+                    <div class="form-grid">
 
                         <div class="asuka">
 
-                            <label for="ida">
-                                Ida
-                            </label>
+                            <label for="origem">De onde você vai?</label>
+
+                            <input
+                                type="text"
+                                id="origem"
+                                value="São Paulo, SP">
+
+                        </div>
+
+                        <div class="asuka">
+
+                            <label for="destino">Para onde você vai?</label>
+
+                            <input
+                                type="text"
+                                id="destino"
+                                value="Rio de Janeiro, RJ">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="asuka">
+
+                            <label for="ida">Ida</label>
 
                             <input
                                 type="date"
@@ -110,13 +98,14 @@
 
                         <div class="asuka">
 
-                            <label for="volta">
-                                Volta
-                            </label>
+                            <label for="passageiros">Passageiros</label>
 
-                            <input
-                                type="date"
-                                id="volta">
+                            <select id="passageiros">
+                                <option>1 passageiro</option>
+                                <option>2 passageiros</option>
+                                <option>3 passageiros</option>
+                                <option>4 passageiros</option>
+                            </select>
 
                         </div>
 
@@ -128,7 +117,7 @@
 
                 </form>
 
-            </section>
+            </div>
 
         </section>
 
