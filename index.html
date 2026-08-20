@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AERO — Sua próxima viagem</title>
+    <title>AERO Travel</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header class="miku">
-        <nav class="bowie" aria-label="Navegação principal">
+        <div class="bowie">
 
-            <a href="index.html" class="luka" aria-label="Página inicial da AERO">
-                AERO
-            </a>
+            <a href="index.html" class="luka">AERO</a>
 
-            <div class="kaito">
+            <nav class="kaito">
                 <a href="index.html" class="rin">Início</a>
                 <a href="buscar.html" class="rin">Buscar</a>
                 <a href="resultados.html" class="rin">Viagens</a>
-            </div>
+                <a href="agenda.html" class="rin">Agenda</a>
+            </nav>
 
-            <button class="len" aria-label="Notificações">
-                ♧
-            </button>
+            <button class="len">♧</button>
 
-        </nav>
+        </div>
     </header>
 
+    <main class="aero-fundo">
 
-    <main>
+        <div class="aero-sombra"></div>
 
-        <section class="gumi">
+        <section class="kanade aero-conteudo">
 
-            <div class="teto">
-
+            <div class="marcy">
                 <p class="ado">AERO TRAVEL</p>
 
-                <h1 class="freddie">
-                    Encontre sua<br>
-                    próxima viagem.
-                </h1>
+                <h1>Encontre sua próxima viagem.</h1>
 
-                <p class="hayley">
-                    Escolha seu destino e encontre
-                    a melhor opção para viajar.
+                <p>
+                    Escolha seu destino e encontre a melhor
+                    opção para viajar.
                 </p>
-
             </div>
 
+            <section class="meiko">
 
-            <section class="meiko" aria-labelledby="busca-titulo">
-
-                <h2 id="busca-titulo" class="flower">
-                    Para onde você quer ir?
-                </h2>
+                <h2 class="flower">Para onde você quer ir?</h2>
 
                 <form class="rei">
 
@@ -72,11 +61,8 @@
                         <input
                             type="text"
                             id="origem"
-                            name="origem"
-                            placeholder="São Paulo, SP"
-                        >
+                            placeholder="São Paulo, SP">
                     </div>
-
 
                     <div class="asuka">
                         <label for="destino">Para onde você vai?</label>
@@ -84,15 +70,16 @@
                         <input
                             type="text"
                             id="destino"
-                            name="destino"
-                            placeholder="Rio de Janeiro, RJ"
-                        >
+                            placeholder="Rio de Janeiro, RJ">
                     </div>
 
+                    <div class="sonic">
 
-                    <button type="submit" class="yor">
-                        Buscar viagens
-                    </button>
+                        <a href="buscar.html" class="yor">
+                            Buscar viagens
+                        </a>
+
+                    </div>
 
                 </form>
 
@@ -100,53 +87,12 @@
 
         </section>
 
-
-        <section class="kanade" aria-labelledby="atalhos-titulo">
-
-            <div class="marcy">
-                <h2 id="atalhos-titulo">Escolha como viajar</h2>
-
-                <p>
-                    Encontre diferentes opções para sua viagem.
-                </p>
-            </div>
-
-
-            <div class="sonic">
-
-                <article class="mob">
-                    <div class="ramona">✈</div>
-
-                    <div>
-                        <h3>Avião</h3>
-                        <p>Viagens rápidas</p>
-                    </div>
-                </article>
-
-
-                <article class="mob">
-                    <div class="ramona">🚁</div>
-
-                    <div>
-                        <h3>Helicóptero</h3>
-                        <p>Uma experiência diferente</p>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
     </main>
 
-
     <footer class="radiohead">
-
-        <p>
-            © 2026 AERO Travel
-        </p>
-
+        AERO Travel • Encontre novos destinos
     </footer>
 
 </body>
+
 </html>
