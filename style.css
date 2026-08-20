@@ -1815,3 +1815,55 @@ main {
     }
 
 }
+
+.aviao-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--rei-round);
+}
+
+.aero-fundo {
+    position: relative;
+    min-height: calc(100vh - 64px);
+
+    background-image: url("../imagens/img1.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.aero-sombra {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(5, 15, 30, 0.45);
+}
+
+.aero-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.aero-fundo .marcy h1,
+.aero-fundo .marcy > p:not(.ado) {
+    color: white;
+}
+
+.aero-fundo .ado {
+    color: #8c82ff;
+}
+
+@media (max-width: 600px)
+.aviao-img {
+    height: 130px;
+}
+
+.aero-fundo {
+    background-attachment: scroll;
+    background-position: center top;
+}
+
+.aero-sombra {
+    background: rgba(5, 15, 30, 0.52);
+}
