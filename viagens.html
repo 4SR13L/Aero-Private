@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AERO — Minhas viagens</title>
+    <title>AERO | Minhas Viagens</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -18,275 +18,156 @@
 
     <header class="miku">
 
-        <nav class="bowie" aria-label="Navegação principal">
+        <div class="bowie">
 
-            <a href="index.html" class="luka" aria-label="Página inicial da AERO">
-                AERO
-            </a>
+            <a href="index.html" class="luka">AERO</a>
 
-            <div class="kaito">
+            <nav class="kaito">
+                <a href="index.html" class="rin">Início</a>
+                <a href="buscar.html" class="rin">Buscar</a>
+                <a href="viagens.html" class="rin active-rin">Viagens</a>
+                <a href="agendamento.html" class="rin">Agenda</a>
+            </nav>
 
-                <a href="index.html" class="rin">
-                    Início
-                </a>
+            <button class="len">♧</button>
 
-                <a href="buscar.html" class="rin">
-                    Buscar
-                </a>
-
-                <a href="viagens.html" class="rin">
-                    Viagens
-                </a>
-
-            </div>
-
-            <button class="len" aria-label="Notificações">
-                ♧
-            </button>
-
-        </nav>
+        </div>
 
     </header>
 
-
     <main>
 
-        <section class="kanade">
+        <section class="pagina">
 
             <div class="marcy">
 
-                <p class="ado">
-                    AERO TRAVEL
-                </p>
+                <p class="ado">MINHAS VIAGENS</p>
 
-                <h1>
-                    Minhas viagens
-                </h1>
+                <h1>Suas próximas viagens.</h1>
 
                 <p>
-                    Acompanhe suas viagens e confira os próximos destinos.
+                    Consulte seus voos e acompanhe seus próximos destinos.
                 </p>
 
             </div>
 
-
-            <nav class="tabs" aria-label="Categorias de viagens">
-
-                <a href="#proximas" class="tab active-tab">
-                    Próximas
-                </a>
-
-                <a href="#passadas" class="tab">
-                    Passadas
-                </a>
-
-            </nav>
-
-
-            <section id="proximas" class="viagens-section" aria-labelledby="proximas-titulo">
+            <div class="viagens-section">
 
                 <div class="section-heading">
 
-                    <h2 id="proximas-titulo">
-                        Próximas viagens
-                    </h2>
+                    <div>
+                        <h2>Próximas viagens</h2>
+                        <span>1 viagem agendada</span>
+                    </div>
 
-                    <span>
-                        1 viagem
-                    </span>
+                    <a href="buscar.html" class="pequeno-botao">
+                        + Nova viagem
+                    </a>
 
                 </div>
 
+                <article class="historico-card">
 
-                <div class="viagens-grid">
+                    <img
+                        src="imagens/img5.png"
+                        alt="Avião voando entre nuvens"
+                        class="historico-imagem">
 
+                    <div class="historico-conteudo">
 
-                    <article class="viagem-card">
+                        <div class="historico-topo">
 
-                        <div class="viagem-topo">
+                            <div>
 
-                            <div class="companhia">
+                                <p class="lilith-text">
+                                    PRÓXIMA VIAGEM
+                                </p>
 
-                                <div class="chihiro">
-                                    ✈
-                                </div>
-
-                                <div>
-
-                                    <h3>
-                                        AERO 204
-                                    </h3>
-
-                                    <p>
-                                        Voo comercial
-                                    </p>
-
-                                </div>
+                                <h2>São Paulo → Rio de Janeiro</h2>
 
                             </div>
 
-
-                            <span class="status">
+                            <span class="confirmed">
                                 Confirmada
                             </span>
 
                         </div>
 
+                        <div class="historico-info">
 
-                        <div class="rota">
-
-                            <div class="cidade">
-
-                                <span>
-                                    São Paulo
-                                </span>
-
-                                <strong>
-                                    08:30
-                                </strong>
-
-                                <small>
-                                    25 AGO
-                                </small>
-
+                            <div>
+                                <span>Data</span>
+                                <strong>20 de agosto de 2026</strong>
                             </div>
 
-
-                            <div class="linha-rota">
-                                ───── ✈ ─────
+                            <div>
+                                <span>Horário</span>
+                                <strong>08:30</strong>
                             </div>
 
-
-                            <div class="cidade">
-
-                                <span>
-                                    Rio de Janeiro
-                                </span>
-
-                                <strong>
-                                    09:35
-                                </strong>
-
-                                <small>
-                                    25 AGO
-                                </small>
-
+                            <div>
+                                <span>Voo</span>
+                                <strong>AER 205</strong>
                             </div>
 
                         </div>
-
-
-                        <div class="viagem-info">
-
-                            <div>
-
-                                <span>
-                                    Passageiros
-                                </span>
-
-                                <strong>
-                                    1
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    Valor
-                                </span>
-
-                                <strong class="violet-text">
-                                    R$ 420
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    Duração
-                                </span>
-
-                                <strong>
-                                    1h 05min
-                                </strong>
-
-                            </div>
-
-                        </div>
-
 
                         <a href="detalhes.html" class="detalhes-link">
-                            Ver detalhes
+                            Ver detalhes da viagem
                         </a>
-
-                    </article>
-
-                </div>
-
-            </section>
-
-
-            <section id="passadas" class="viagens-section" aria-labelledby="passadas-titulo">
-
-                <div class="section-heading">
-
-                    <h2 id="passadas-titulo">
-                        Viagens passadas
-                    </h2>
-
-                    <span>
-                        Histórico
-                    </span>
-
-                </div>
-
-
-                <article class="historico-card">
-
-                    <div class="historico-icon">
-                        ✓
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Nenhuma viagem recente
-                        </h3>
-
-                        <p>
-                            Quando você realizar uma viagem,
-                            ela aparecerá aqui.
-                        </p>
 
                     </div>
 
                 </article>
 
-            </section>
+            </div>
 
+            <section class="historico">
 
-            <section class="nova-viagem">
+                <div class="section-heading">
 
-                <div>
-
-                    <h2>
-                        Pronto para conhecer outro lugar?
-                    </h2>
-
-                    <p>
-                        Encontre seu próximo destino com a AERO.
-                    </p>
+                    <div>
+                        <h2>Histórico</h2>
+                        <span>Viagens anteriores</span>
+                    </div>
 
                 </div>
 
+                <article class="historico-pequeno">
 
-                <a href="buscar.html" class="yor">
-                    Buscar viagem
-                </a>
+                    <div class="historico-icon">✈</div>
+
+                    <div class="historico-rota">
+
+                        <strong>Porto Alegre → São Paulo</strong>
+
+                        <span>12 de junho de 2026 • AER 128</span>
+
+                    </div>
+
+                    <span class="finalizada">
+                        Finalizada
+                    </span>
+
+                </article>
+
+                <article class="historico-pequeno">
+
+                    <div class="historico-icon">✈</div>
+
+                    <div class="historico-rota">
+
+                        <strong>Rio de Janeiro → Salvador</strong>
+
+                        <span>04 de maio de 2026 • AER 342</span>
+
+                    </div>
+
+                    <span class="finalizada">
+                        Finalizada
+                    </span>
+
+                </article>
 
             </section>
 
@@ -294,14 +175,10 @@
 
     </main>
 
-
     <footer class="radiohead">
-
-        <p>
-            © 2026 AERO Travel
-        </p>
-
+        AERO Travel
     </footer>
 
 </body>
+
 </html>
