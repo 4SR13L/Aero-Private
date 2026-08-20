@@ -1,469 +1,347 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AERO — Resultados</title>
+    <title>Viagens - AERO</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header class="miku">
 
-        <nav class="bowie" aria-label="Navegação principal">
+        <div class="bowie">
 
-            <a href="index.html" class="luka" aria-label="Página inicial da AERO">
-                AERO
-            </a>
+            <a href="index.html" class="luka">AERO</a>
 
-            <div class="kaito">
+            <nav class="kaito">
+                <a href="index.html" class="rin">Início</a>
+                <a href="buscar.html" class="rin">Buscar</a>
+                <a href="resultados.html" class="rin">Viagens</a>
+                <a href="agenda.html" class="rin">Agenda</a>
+            </nav>
 
-                <a href="index.html" class="rin">
-                    Início
-                </a>
+            <button class="len">♧</button>
 
-                <a href="buscar.html" class="rin">
-                    Buscar
-                </a>
-
-                <a href="resultados.html" class="rin">
-                    Viagens
-                </a>
-
-            </div>
-
-            <button class="len" aria-label="Notificações">
-                ♧
-            </button>
-
-        </nav>
+        </div>
 
     </header>
-
 
     <main>
 
         <section class="kanade">
 
+            <a href="buscar.html" class="morrigan">
+                ← Alterar busca
+            </a>
+
             <div class="marcy">
 
-                <p class="ado">
-                    RESULTADOS
-                </p>
+                <p class="ado">VIAGENS ENCONTRADAS</p>
 
-                <h1>
-                    Viagens encontradas
-                </h1>
+                <h1>Voos para o Rio.</h1>
 
                 <p>
-                    São Paulo, SP
-                    <strong>→</strong>
-                    Rio de Janeiro, RJ
+                    São Paulo, SP → Rio de Janeiro, RJ
                 </p>
 
             </div>
 
+            <section class="viagens-section">
 
-            <section class="lilith" aria-labelledby="filtros-titulo">
+                <div class="section-heading">
 
-                <div class="nyan">
+                    <h2>Melhores opções</h2>
 
-                    <h2 id="filtros-titulo">
-                        Filtrar resultados
-                    </h2>
-
-                    <button class="lilac">
-                        Menor preço
-                    </button>
-
-                    <button class="lilac">
-                        Mais rápido
-                    </button>
-
-                    <button class="lilac">
-                        Melhor avaliação
-                    </button>
+                    <span>4 voos encontrados</span>
 
                 </div>
 
-            </section>
+                <div class="viagens-grid">
 
+                    <article class="viagem-card">
 
-            <section class="kira" aria-labelledby="viagens-titulo">
+                        <img
+                            src="imagens/img2.png"
+                            alt="Avião Boeing Business Jet voando pelo céu"
+                            class="aviao-img">
 
-                <div class="marcy">
+                        <div class="viagem-topo">
 
-                    <h2 id="viagens-titulo">
-                        Opções disponíveis
-                    </h2>
+                            <div class="companhia">
 
-                </div>
+                                <div class="chihiro">✈</div>
 
+                                <div>
+                                    <h3>AERO Business</h3>
+                                    <p>Boeing 747</p>
+                                </div>
 
-                <div class="mavis">
-
-
-                    <article class="seraph">
-
-                        <div class="vivi">
-
-                            <div class="chihiro">
-                                ✈
                             </div>
 
-                            <div>
+                            <span class="status">Disponível</span>
 
-                                <h3>
-                                    AERO 204
-                                </h3>
+                        </div>
 
-                                <p>
-                                    Voo comercial
-                                </p>
+                        <div class="rota">
 
+                            <div class="cidade">
+                                <span>São Paulo</span>
+                                <strong>08:30</strong>
+                                <small>GRU</small>
+                            </div>
+
+                            <div class="linha-rota">
+                                ✈ ───── ✈
+                            </div>
+
+                            <div class="cidade">
+                                <span>Rio de Janeiro</span>
+                                <strong>09:35</strong>
+                                <small>GIG</small>
                             </div>
 
                         </div>
 
-
-                        <div class="yuna">
+                        <div class="viagem-info">
 
                             <div>
-                                <strong>
-                                    08:30
-                                </strong>
-
-                                <span>
-                                    São Paulo
-                                </span>
-                            </div>
-
-                            <div class="suki">
-                                ───── ✈ ─────
+                                <span>Duração</span>
+                                <strong>1h 05min</strong>
                             </div>
 
                             <div>
-                                <strong>
-                                    09:35
-                                </strong>
+                                <span>Classe</span>
+                                <strong>Econômica</strong>
+                            </div>
 
-                                <span>
-                                    Rio de Janeiro
-                                </span>
+                            <div>
+                                <span>Preço</span>
+                                <strong>R$ 489</strong>
                             </div>
 
                         </div>
 
-
-                        <div class="raven">
-
-                            <div>
-
-                                <span>
-                                    Duração
-                                </span>
-
-                                <strong>
-                                    1h 05min
-                                </strong>
-
-                            </div>
-
-                            <div>
-
-                                <span>
-                                    A partir de
-                                </span>
-
-                                <strong class="violet-text">
-                                    R$ 420
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a href="detalhes.html" class="yor">
+                        <a href="detalhes.html" class="detalhes-link">
                             Ver detalhes
                         </a>
 
                     </article>
 
+                    <article class="viagem-card">
 
-                    <article class="seraph">
+                        <img
+                            src="imagens/img3.png"
+                            alt="Avião Boeing 747 azul voando"
+                            class="aviao-img">
 
-                        <div class="vivi">
+                        <div class="viagem-topo">
 
-                            <div class="chihiro">
-                                ✈
+                            <div class="companhia">
+
+                                <div class="chihiro">✈</div>
+
+                                <div>
+                                    <h3>AERO Airways</h3>
+                                    <p>Boeing 747</p>
+                                </div>
+
                             </div>
 
-                            <div>
+                            <span class="status">Disponível</span>
 
-                                <h3>
-                                    AERO 318
-                                </h3>
+                        </div>
 
-                                <p>
-                                    Voo comercial
-                                </p>
+                        <div class="rota">
 
+                            <div class="cidade">
+                                <span>São Paulo</span>
+                                <strong>10:15</strong>
+                                <small>GRU</small>
+                            </div>
+
+                            <div class="linha-rota">
+                                ✈ ───── ✈
+                            </div>
+
+                            <div class="cidade">
+                                <span>Rio de Janeiro</span>
+                                <strong>11:25</strong>
+                                <small>GIG</small>
                             </div>
 
                         </div>
 
-
-                        <div class="yuna">
+                        <div class="viagem-info">
 
                             <div>
-                                <strong>
-                                    10:20
-                                </strong>
-
-                                <span>
-                                    São Paulo
-                                </span>
-                            </div>
-
-                            <div class="suki">
-                                ───── ✈ ─────
+                                <span>Duração</span>
+                                <strong>1h 10min</strong>
                             </div>
 
                             <div>
-                                <strong>
-                                    11:35
-                                </strong>
+                                <span>Classe</span>
+                                <strong>Econômica</strong>
+                            </div>
 
-                                <span>
-                                    Rio de Janeiro
-                                </span>
+                            <div>
+                                <span>Preço</span>
+                                <strong>R$ 529</strong>
                             </div>
 
                         </div>
 
-
-                        <div class="raven">
-
-                            <div>
-
-                                <span>
-                                    Duração
-                                </span>
-
-                                <strong>
-                                    1h 15min
-                                </strong>
-
-                            </div>
-
-                            <div>
-
-                                <span>
-                                    A partir de
-                                </span>
-
-                                <strong class="violet-text">
-                                    R$ 480
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a href="detalhes.html" class="yor">
+                        <a href="detalhes.html" class="detalhes-link">
                             Ver detalhes
                         </a>
 
                     </article>
 
+                    <article class="viagem-card">
 
-                    <article class="seraph">
+                        <img
+                            src="imagens/img4.png"
+                            alt="Avião Boeing 747 da Lufthansa no aeroporto"
+                            class="aviao-img">
 
-                        <div class="vivi">
+                        <div class="viagem-topo">
 
-                            <div class="chihiro">
-                                ✈
+                            <div class="companhia">
+
+                                <div class="chihiro">✈</div>
+
+                                <div>
+                                    <h3>AERO International</h3>
+                                    <p>Boeing 747</p>
+                                </div>
+
                             </div>
 
-                            <div>
+                            <span class="status">Disponível</span>
 
-                                <h3>
-                                    AERO 421
-                                </h3>
+                        </div>
 
-                                <p>
-                                    Voo comercial
-                                </p>
+                        <div class="rota">
 
+                            <div class="cidade">
+                                <span>São Paulo</span>
+                                <strong>13:40</strong>
+                                <small>GRU</small>
+                            </div>
+
+                            <div class="linha-rota">
+                                ✈ ───── ✈
+                            </div>
+
+                            <div class="cidade">
+                                <span>Rio de Janeiro</span>
+                                <strong>14:50</strong>
+                                <small>GIG</small>
                             </div>
 
                         </div>
 
-
-                        <div class="yuna">
+                        <div class="viagem-info">
 
                             <div>
-                                <strong>
-                                    13:45
-                                </strong>
-
-                                <span>
-                                    São Paulo
-                                </span>
-                            </div>
-
-                            <div class="suki">
-                                ───── ✈ ─────
+                                <span>Duração</span>
+                                <strong>1h 10min</strong>
                             </div>
 
                             <div>
-                                <strong>
-                                    15:00
-                                </strong>
+                                <span>Classe</span>
+                                <strong>Executiva</strong>
+                            </div>
 
-                                <span>
-                                    Rio de Janeiro
-                                </span>
+                            <div>
+                                <span>Preço</span>
+                                <strong>R$ 720</strong>
                             </div>
 
                         </div>
 
-
-                        <div class="raven">
-
-                            <div>
-
-                                <span>
-                                    Duração
-                                </span>
-
-                                <strong>
-                                    1h 15min
-                                </strong>
-
-                            </div>
-
-                            <div>
-
-                                <span>
-                                    A partir de
-                                </span>
-
-                                <strong class="violet-text">
-                                    R$ 510
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a href="detalhes.html" class="yor">
+                        <a href="detalhes.html" class="detalhes-link">
                             Ver detalhes
                         </a>
 
                     </article>
 
+                    <article class="viagem-card">
 
-                    <article class="seraph">
+                        <img
+                            src="imagens/img5.png"
+                            alt="Avião Boeing voando acima das nuvens durante o pôr do sol"
+                            class="aviao-img">
 
-                        <div class="vivi">
+                        <div class="viagem-topo">
 
-                            <div class="chihiro">
-                                🚁
+                            <div class="companhia">
+
+                                <div class="chihiro">✈</div>
+
+                                <div>
+                                    <h3>AERO Sunset</h3>
+                                    <p>Boeing 747</p>
+                                </div>
+
                             </div>
 
-                            <div>
+                            <span class="status">Disponível</span>
 
-                                <h3>
-                                    AERO VIP 02
-                                </h3>
+                        </div>
 
-                                <p>
-                                    Helicóptero executivo
-                                </p>
+                        <div class="rota">
 
+                            <div class="cidade">
+                                <span>São Paulo</span>
+                                <strong>17:20</strong>
+                                <small>GRU</small>
+                            </div>
+
+                            <div class="linha-rota">
+                                ✈ ───── ✈
+                            </div>
+
+                            <div class="cidade">
+                                <span>Rio de Janeiro</span>
+                                <strong>18:30</strong>
+                                <small>GIG</small>
                             </div>
 
                         </div>
 
-
-                        <div class="yuna">
+                        <div class="viagem-info">
 
                             <div>
-                                <strong>
-                                    16:00
-                                </strong>
-
-                                <span>
-                                    São Paulo
-                                </span>
-                            </div>
-
-                            <div class="suki">
-                                ───── 🚁 ─────
+                                <span>Duração</span>
+                                <strong>1h 10min</strong>
                             </div>
 
                             <div>
-                                <strong>
-                                    17:05
-                                </strong>
+                                <span>Classe</span>
+                                <strong>Econômica</strong>
+                            </div>
 
-                                <span>
-                                    Rio de Janeiro
-                                </span>
-
+                            <div>
+                                <span>Preço</span>
+                                <strong>R$ 459</strong>
                             </div>
 
                         </div>
 
-
-                        <div class="raven">
-
-                            <div>
-
-                                <span>
-                                    Duração
-                                </span>
-
-                                <strong>
-                                    1h 05min
-                                </strong>
-
-                            </div>
-
-                            <div>
-
-                                <span>
-                                    A partir de
-                                </span>
-
-                                <strong class="violet-text">
-                                    R$ 1.250
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <a href="detalhes.html" class="yor">
+                        <a href="detalhes.html" class="detalhes-link">
                             Ver detalhes
                         </a>
 
                     </article>
-
 
                 </div>
 
@@ -473,14 +351,10 @@
 
     </main>
 
-
     <footer class="radiohead">
-
-        <p>
-            © 2026 AERO Travel
-        </p>
-
+        AERO Travel • Encontre seu próximo destino
     </footer>
 
 </body>
+
 </html>
