@@ -683,3 +683,271 @@ input {
     }
 
 }
+.morrigan {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    color: var(--miku-blue);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: transform 0.2s ease;
+}
+
+
+.morrigan:hover {
+    transform: translateX(-4px);
+}
+
+
+.aster {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    border-radius: var(--meiko-round);
+
+    background: var(--gumi-white);
+
+    border: 1px solid var(--ado-border);
+
+    box-shadow: var(--freddie-shadow);
+}
+
+
+.selene {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid var(--ado-border);
+}
+
+
+.selene h2 {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+}
+
+
+.selene p {
+    font-size: 12px;
+
+    color: var(--ado-gray);
+}
+
+
+.lilith-text {
+    margin-bottom: 4px;
+
+    color: var(--miku-blue) !important;
+
+    font-size: 10px !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.orion {
+    padding: 35px 10px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    text-align: center;
+}
+
+
+.destino {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.destino span {
+    font-size: 11px;
+
+    color: var(--ado-gray);
+}
+
+
+.destino strong {
+    font-size: 28px;
+}
+
+
+.destino p {
+    font-size: 13px;
+
+    color: var(--ado-gray);
+}
+
+
+.trajeto {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--miku-blue);
+}
+
+
+.trajeto span {
+    font-size: 10px;
+
+    color: var(--ado-gray);
+}
+
+
+.trajeto div {
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+.lyra {
+    margin-top: 30px;
+}
+
+
+.lyra h2 {
+    margin-bottom: 18px;
+
+    font-size: 20px;
+}
+
+
+.cassio {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.nova-card {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    border: 1px solid var(--ado-border);
+    border-radius: var(--rei-round);
+
+    background: var(--gumi-white);
+}
+
+
+.nova-card span {
+    font-size: 11px;
+
+    color: var(--ado-gray);
+}
+
+
+.nova-card strong {
+    font-size: 14px;
+}
+
+
+.payton {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border-radius: var(--meiko-round);
+
+    color: var(--gumi-white);
+
+    background: var(--bowie-night);
+
+    box-shadow: var(--freddie-shadow);
+}
+
+
+.payton p {
+    margin-bottom: 5px;
+
+    font-size: 12px;
+
+    color: #c8cedb;
+}
+
+
+.payton h2 {
+    font-size: 28px;
+}
+
+
+.payton .yor {
+    width: auto;
+
+    min-width: 160px;
+
+    text-align: center;
+
+    color: var(--gumi-white);
+}
+
+@media (max-width: 650px) {
+
+    .aster {
+        padding: 22px 18px;
+    }
+
+
+    .orion {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .trajeto {
+        transform: rotate(90deg);
+    }
+
+
+    .cassio {
+        grid-template-columns: 1fr;
+    }
+
+
+    .payton {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .payton .yor {
+        width: 100%;
+    }
+
+}
