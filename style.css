@@ -350,7 +350,7 @@ input {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
   
     .bowie {
         min-height: 64px;
@@ -394,7 +394,7 @@ input {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
 
     .gumi {
         padding: 25px 18px;
@@ -649,7 +649,7 @@ input {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .nyan {
         align-items: stretch;
@@ -1155,7 +1155,7 @@ input {
     color: var(--miku-blue);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .selena {
         margin: 40px auto;
@@ -1555,7 +1555,7 @@ input {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .tabs {
         overflow-x: auto;
@@ -1609,7 +1609,7 @@ input {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .bowie {
         padding: 12px 16px;
